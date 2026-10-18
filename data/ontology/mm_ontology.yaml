@@ -1,0 +1,471 @@
+modulo: MM
+descricao: Ontologia P2P (MM) — processos curados manualmente, transações/tabelas
+  enriquecidas pela planilha corporativa
+fora_escopo:
+  modulos:
+  - HR
+  - HCM
+  modulos_adjacentes:
+  - FI
+  - CO
+  - SD
+  - PP
+  - PM
+  - WM
+  - BC
+  intencoes:
+  - executar acao
+  - rodar script
+  - liberar em massa
+  - alterar em massa
+processos:
+  requisicao_compra:
+    nome: Requisição de compra
+    etapa: 1
+    tabelas:
+    - EBAN
+    informacoes_minimas:
+    - numero_requisicao_ou_item
+    - transacao
+    - mensagem_de_erro
+    transacoes:
+    - ME51N
+    - ME52N
+    - ME53N
+    - ME54N
+    - ME55
+    - ME57
+    - ME5A
+    descricoes_transacoes:
+      ME51N: Cria requisição de compras
+      ME52N: Modifica requisição de compras
+      ME53N: Consulta requisição de compras
+      ME54N: Libera requisição de compras (individual)
+      ME55: Libera requisição de compras (coletivo)
+      ME57: Atribuir e Processar Requisições de Compras
+      ME5A: Lista de requisições de compras
+  pedido_compra:
+    nome: Pedido de compra / contratos / cotações
+    etapa: 2
+    tabelas:
+    - EKKO
+    - EKPO
+    - EKET
+    - EKBE
+    - T16FS
+    - T16FV
+    objetos_autorizacao:
+    - M_BEST_EKO
+    - M_BEST_WRK
+    - M_BEST_BSA
+    - M_EINK_FRG
+    informacoes_minimas:
+    - numero_pedido
+    - sintoma_ou_mensagem
+    transacoes:
+    - ME21N
+    - ME22N
+    - ME23N
+    - ME24N
+    - ME28
+    - ME2L
+    - ME2M
+    - ME2N
+    - ME31K
+    - ME32K
+    - ME33K
+    - ME35K
+    - ME3L
+    - ME3M
+    - ME41
+    - ME42
+    - ME43
+    - ME44
+    - ME45
+    - ME47
+    - ME48
+    - ME49
+    - ME80FN
+    - ME9F
+    descricoes_transacoes:
+      ME21N: Cria pedido de compras
+      ME22N: Modifica pedido de compras
+      ME23N: Consulta pedido de compras
+      ME24N: Atualizar anexo
+      ME28: Liberação dos pedidos de compras
+      ME2L: Lista de pedidos de compras por fornecedor
+      ME2M: Lista de pedidos de compras por material
+      ME2N: Doc de compra por nº documento
+      ME31K: Criar contrato
+      ME32K: Modificar contrato
+      ME33K: Consulta contrato
+      ME35K: Libera contrato
+      ME3L: Lista de contratos por fornecedor
+      ME3M: Lista de contratos por material
+      ME41: Criar Solicitação de Cotação
+      ME42: Modificar Solicitação de Cotação
+      ME43: Exibir Solicitação de Cotação
+      ME44: Atualizar Anexo Solicitação de Cotação
+      ME45: liberarSolicitação de Cotação
+      ME47: Atualizar Cotação
+      ME48: Exibir Cotação
+      ME49: Comparação de Preços
+      ME80FN: Análises gerais dos pedidos de compras
+      ME9F: Imprimir pedidos de compras
+  entrada_mercadoria:
+    nome: Entrada de mercadoria / movimentos de estoque
+    etapa: 3
+    tabelas:
+    - MKPF
+    - MSEG
+    - MARD
+    - MARC
+    mensagens:
+    - M7053
+    - M7021
+    - M7022
+    - M7001
+    - M7024
+    - M7093
+    informacoes_minimas:
+    - numero_pedido_ou_documento_material
+    - data_lancamento
+    - mensagem_de_erro
+    transacoes:
+    - MB01
+    - MB03
+    - MB1A
+    - MB1B
+    - MB1C
+    - MB51
+    - MB52
+    - MB53
+    - MBSM
+    - MBST
+    - MI01
+    - MI02
+    - MI03
+    - MI04
+    - MI06
+    - MI07
+    - MI11
+    - MI20
+    - MI21
+    - MIGO
+    - MMBE
+    - MMPV
+    descricoes_transacoes:
+      MB01: Entrada de materiais com referência ao pedido de compras
+      MB03: Consulta movimentação de material
+      MB1A: Saída de materiais
+      MB1B: Transferência de materiais
+      MB1C: Entrada de materiais
+      MB51: Consulta movimentação de material
+      MB52: Consulta estoque de vários materiais ao mesmo tempo
+      MB53: Disponibilidade centro
+      MBSM: Consulta documentos que foram estornados
+      MBST: Estorno de documento (MIGO)
+      MI01: Criar documento de inventário
+      MI02: Modificar documento de inventário
+      MI03: Exibir documento de inventário
+      MI04: Registrar Contagem de Inventário
+      MI06: Exibir Contagem de Inventário
+      MI07: Registrar Diferença (material físico com o SAP)
+      MI11: Registrar Recontagem
+      MI20: Imprimir Lista de Diferenças
+      MI21: Imprimir Documento de Inventário
+      MIGO: Movimentação de mercadorias
+      MMBE: Consulta estoque do material (síntese de estoque)
+      MMPV: Diferir Período MM
+  verificacao_fatura:
+    nome: Verificação de fatura (MIRO)
+    etapa: 4
+    tabelas:
+    - RBKP
+    - RSEG
+    - EKBE
+    mensagens:
+    - M8049
+    - M8050
+    - M8504
+    informacoes_minimas:
+    - numero_fatura_ou_pedido
+    - mensagem_de_erro_ou_sintoma
+    transacoes:
+    - MIR4
+    - MIR6
+    - MIRO
+    - MR51
+    - MR8M
+    - MRBR
+    descricoes_transacoes:
+      MIR4: Consulta documentos gerados pela MIRO
+      MIR6: Consulta documentos gerados pela MIRO
+      MIRO: Lançamento das faturas e notas fiscais
+      MR51: Consulta documentos contábeis gerados na movimentação de material
+      MR8M: Estorno da MIRO
+      MRBR: Liberar Faturas Bloqueadas
+  localizacao_brasil:
+    nome: Nota fiscal e impostos (Localização BR)
+    etapa: 4
+    tabelas:
+    - J_1BNFDOC
+    - J_1BNFLIN
+    - J_1BTXIC1
+    - J_1BTXIP1
+    informacoes_minimas:
+    - numero_nota_ou_pedido
+    - codigo_imposto_ou_mensagem
+    transacoes:
+    - J1B1N
+    - J1B2N
+    - J1B3N
+    descricoes_transacoes:
+      J1B1N: Cria nota fiscal writer
+      J1B2N: Modifica nota fiscal
+      J1B3N: Consulta, cancela e imprime nota fiscal
+  integracao:
+    nome: Integração / IDoc / interfaces
+    tabelas:
+    - EDIDC
+    - EDID4
+    informacoes_minimas:
+    - numero_idoc_ou_mensagem
+    - tipo_mensagem
+    - status
+    transacoes: []
+    descricoes_transacoes: {}
+  dados_mestres:
+    nome: Dados mestres (material, fornecedor, registro info)
+    tabelas:
+    - MARA
+    - MARC
+    - MBEW
+    - LFA1
+    - LFM1
+    - EINA
+    - EINE
+    informacoes_minimas:
+    - codigo_material_ou_fornecedor
+    - centro_ou_org_compras
+    - mensagem_de_erro
+    transacoes:
+    - FK01
+    - FK02
+    - FK03
+    - ME01
+    - ME15
+    - MK01
+    - MK02
+    - MK03
+    - MKVZ
+    - MM01
+    - MM02
+    - MM03
+    - MM06
+    - MM07
+    - MM60
+    - MSC1N
+    - MSC2N
+    - MSC3N
+    - XK01
+    - XK02
+    - XK03
+    descricoes_transacoes:
+      FK01: Cria fornecedor - Dados gerais e financeiros
+      FK02: Modifica fornecedor - Dados gerais e financeiros
+      FK03: Consulta fornecedor - Dados gerais e financeiros
+      ME01: Criar LOF/Atualizar
+      ME15: deletar registro Info
+      MK01: Cria fornecedor - Dados gerais e compras
+      MK02: Modifica fornecedor - Dados gerais e compras
+      MK03: Consulta fornecedor - Dados gerais e compras
+      MKVZ: Lista de fornecedores
+      MM01: Criar material
+      MM02: Modifica material
+      MM03: Consulta material
+      MM06: Marcar material para eliminação
+      MM07: Manutenção em Massa
+      MM60: Lista de materiais
+      MSC1N: Criar dados do Lote
+      MSC2N: Modificar dados do Lote
+      MSC3N: Exibir dados do Lote Lote
+      XK01: Cria fornecedor
+      XK02: Modifica fornecedor
+      XK03: Consulta fornecedor
+  autorizacao:
+    nome: Autorização e acesso
+    objetos_autorizacao:
+    - M_BEST_EKO
+    - M_BEST_WRK
+    - M_BANF_EKO
+    - M_EINK_FRG
+    - M_MSEG_BWA
+    - M_RECH_WRK
+    informacoes_minimas:
+    - transacao
+    - texto_exato_do_erro
+    - usuario
+    transacoes: []
+    descricoes_transacoes: {}
+  relatorios:
+    nome: Relatórios e consultas de compras/estoque
+    informacoes_minimas:
+    - nome_do_relatorio
+    - parametros_de_selecao
+    - resultado_esperado
+    transacoes:
+    - S_ALR_87012150
+    - S_ALR_87012151
+    - S_ALR_87012152
+    - S_ALR_87012153
+    descricoes_transacoes:
+      S_ALR_87012150: Transação standard - Livro Fiscal Modelo 1
+      S_ALR_87012151: Transação standard - Livro Fiscal Modelo 2
+      S_ALR_87012152: Transação standard - Livro Fiscal Modelo 3
+      S_ALR_87012153: Transação standard - Livro Fiscal Modelo 7
+acoes_criticas:
+- liberar pedido
+- liberar requisição
+- liberar fatura
+- liberar bloqueio
+- estornar
+- abrir período
+- fechar período
+- alterar configuração
+- spro
+- atribuir autorização
+- atribuir role
+- alterar dados mestres
+- alteração em massa
+- executar script
+- transporte
+categorias_planilha_mm:
+  Fornecedores:
+  - FK01
+  - FK02
+  - FK03
+  - MK01
+  - MK02
+  - MK03
+  - MKVZ
+  - XK01
+  - XK02
+  - XK03
+  Entrada Fiscal:
+  - J1B1N
+  - J1B2N
+  - J1B3N
+  - MBSM
+  - MIR4
+  - MIR6
+  - MIRO
+  - MR8M
+  - MRBR
+  Inventário:
+  - MB01
+  - MB03
+  - MB1A
+  - MB1B
+  - MB1C
+  - MB51
+  - MB52
+  - MB53
+  - MMBE
+  - MR51
+  Entrada Física:
+  - MBST
+  - MIGO
+  Livro Fiscal:
+  - ME01
+  - ME15
+  - ME2N
+  - MMPV
+  - S_ALR_87012150
+  - S_ALR_87012151
+  - S_ALR_87012152
+  - S_ALR_87012153
+  - VF01
+  - VL02N
+  - VL10B
+  - VL31N
+  - VT01N
+  Pedidos de Compras:
+  - ME21N
+  - ME22N
+  - ME23N
+  - ME24N
+  - ME28
+  - ME9F
+  Relatório de Compras:
+  - ME2L
+  - ME2M
+  - ME3L
+  - ME3M
+  - ME5A
+  - ME80FN
+  Contratos:
+  - ME31K
+  - ME32K
+  - ME33K
+  - ME35K
+  Cotação:
+  - ME41
+  - ME42
+  - ME43
+  - ME44
+  - ME45
+  - ME47
+  - ME48
+  - ME49
+  Requisição de Compras:
+  - ME51N
+  - ME52N
+  - ME53N
+  - ME54N
+  - ME55
+  - ME57
+  Inventário Físico:
+  - MI01
+  - MI02
+  - MI03
+  - MI04
+  - MI06
+  - MI07
+  - MI11
+  - MI20
+  - MI21
+  Materiais:
+  - MM01
+  - MM02
+  - MM03
+  - MM06
+  - MM07
+  - MM60
+  Lote:
+  - MSC1N
+  - MSC2N
+  - MSC3N
+tipos_material:
+  FERT: Produto Acabado
+  HALB: Produto Semi-Acabado
+  ROH: Matéria-Prima
+  PACK: Material de Embalagem
+  ERSA: Peça de Reposição
+  UNBW: Material Não Valorizado
+  NLAG: Material Não Estoque
+  DIEN: Serviço
+tabelas_referencia:
+  /VIRSA/TCODE: Contém as transações
+  TSTCT: Contém as transações
+modulos_catalogo:
+  MM: Gestão de Materiais
+  PP: Planejamento de Produção
+  SD: Vendas
+  FI: Financeiro
+  CO: Controladoria
+  WM: Warehouse Management
+  PM: Gestão de Manutenção
+  HR: Recursos Humanos
+  BC: Extras
+catalogo_transacoes_path: transacoes_catalogo.yaml

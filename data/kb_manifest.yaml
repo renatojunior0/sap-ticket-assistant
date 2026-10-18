@@ -1,0 +1,374 @@
+resumo:
+  documentos: 30
+  indexado: 21
+  excluido: 9
+  chunks_indexados: 409
+  chunks_por_processo:
+    dados_mestres: 73
+    entrada_mercadoria: 86
+    localizacao_brasil: 253
+    pedido_compra: 105
+    requisicao_compra: 9
+    verificacao_fatura: 265
+    visao_geral_p2p: 24
+  chunks_por_extracao:
+    ocr: 11
+    texto: 10
+documentos:
+- arquivo: 001 Fluxos de MM.pdf
+  formato: pdf
+  tamanho_kb: 99
+  paginas: 1
+  origem: Ka Solution — SAP S/4HANA MM Academy (apostila passo a passo)
+  tipo: passo_a_passo
+  processos:
+  - visao_geral_p2p
+  status: indexado
+  motivo_exclusao: null
+  extracao: ocr
+  chunks: 1
+- arquivo: 005 ME51N.pdf
+  formato: pdf
+  tamanho_kb: 1771
+  paginas: 3
+  origem: Ka Solution — SAP S/4HANA MM Academy (apostila passo a passo)
+  tipo: passo_a_passo
+  processos:
+  - requisicao_compra
+  status: indexado
+  motivo_exclusao: null
+  extracao: ocr
+  chunks: 4
+- arquivo: 006 ME21N.pdf
+  formato: pdf
+  tamanho_kb: 2217
+  paginas: 6
+  origem: Ka Solution — SAP S/4HANA MM Academy (apostila passo a passo)
+  tipo: passo_a_passo
+  processos:
+  - pedido_compra
+  status: indexado
+  motivo_exclusao: null
+  extracao: ocr
+  chunks: 12
+- arquivo: 008 ME22N.pdf
+  formato: pdf
+  tamanho_kb: 1780
+  paginas: 3
+  origem: Ka Solution — SAP S/4HANA MM Academy (apostila passo a passo)
+  tipo: passo_a_passo
+  processos:
+  - pedido_compra
+  status: indexado
+  motivo_exclusao: null
+  extracao: ocr
+  chunks: 5
+- arquivo: 009 ME23N.pdf
+  formato: pdf
+  tamanho_kb: 2274
+  paginas: 6
+  origem: Ka Solution — SAP S/4HANA MM Academy (apostila passo a passo)
+  tipo: passo_a_passo
+  processos:
+  - pedido_compra
+  status: indexado
+  motivo_exclusao: null
+  extracao: ocr
+  chunks: 12
+- arquivo: 014 MIGO.pdf
+  formato: pdf
+  tamanho_kb: 1903
+  paginas: 4
+  origem: Ka Solution — SAP S/4HANA MM Academy (apostila passo a passo)
+  tipo: passo_a_passo
+  processos:
+  - visao_geral_p2p
+  status: indexado
+  motivo_exclusao: null
+  extracao: ocr
+  chunks: 7
+- arquivo: 017 MIRO.pdf
+  formato: pdf
+  tamanho_kb: 2172
+  paginas: 6
+  origem: Ka Solution — SAP S/4HANA MM Academy (apostila passo a passo)
+  tipo: passo_a_passo
+  processos:
+  - visao_geral_p2p
+  status: indexado
+  motivo_exclusao: null
+  extracao: ocr
+  chunks: 11
+- arquivo: 018 MR8M.pdf
+  formato: pdf
+  tamanho_kb: 1818
+  paginas: 4
+  origem: Ka Solution — SAP S/4HANA MM Academy (apostila passo a passo)
+  tipo: passo_a_passo
+  processos:
+  - verificacao_fatura
+  status: indexado
+  motivo_exclusao: null
+  extracao: ocr
+  chunks: 6
+- arquivo: 020 3 Pedidos deCompras.pdf
+  formato: pdf
+  tamanho_kb: 87
+  paginas: 1
+  origem: Ka Solution — SAP S/4HANA MM Academy (apostila passo a passo)
+  tipo: passo_a_passo
+  processos:
+  - visao_geral_p2p
+  status: indexado
+  motivo_exclusao: null
+  extracao: ocr
+  chunks: 1
+- arquivo: 023 Dicas Profissional - Compras.pdf
+  formato: pdf
+  tamanho_kb: 1682
+  paginas: 3
+  origem: Ka Solution — SAP S/4HANA MM Academy (apostila passo a passo)
+  tipo: passo_a_passo
+  processos:
+  - visao_geral_p2p
+  status: indexado
+  motivo_exclusao: null
+  extracao: ocr
+  chunks: 4
+- arquivo: EXFOCA_COMPRAS_CONSUMO.docx
+  formato: docx
+  tamanho_kb: 70
+  paginas: null
+  origem: Exercício prático autoral
+  tipo: exercicio
+  processos: &id001
+  - requisicao_compra
+  - pedido_compra
+  status: indexado
+  motivo_exclusao: null
+  extracao: texto
+  chunks: 3
+- arquivo: EXFOCA_COMPRAS_ESTOQUE.docx
+  formato: docx
+  tamanho_kb: 130
+  paginas: null
+  origem: Exercício prático autoral
+  tipo: exercicio
+  processos: *id001
+  status: indexado
+  motivo_exclusao: null
+  extracao: texto
+  chunks: 2
+- arquivo: EXFOCA_IMPOSTOS.docx
+  formato: docx
+  tamanho_kb: 32
+  paginas: null
+  origem: Exercício prático autoral
+  tipo: exercicio
+  processos:
+  - localizacao_brasil
+  - verificacao_fatura
+  status: indexado
+  motivo_exclusao: null
+  extracao: texto
+  chunks: 1
+- arquivo: EXFOCA_MOV_ESTOQUES.docx
+  formato: docx
+  tamanho_kb: 33
+  paginas: null
+  origem: Exercício prático autoral
+  tipo: exercicio
+  processos:
+  - entrada_mercadoria
+  status: indexado
+  motivo_exclusao: null
+  extracao: texto
+  chunks: 1
+- arquivo: EX_ESTRUT_ORG_DADOS_MESTRES.docx
+  formato: docx
+  tamanho_kb: 186
+  paginas: null
+  origem: Exercício prático autoral
+  tipo: exercicio
+  processos:
+  - dados_mestres
+  status: indexado
+  motivo_exclusao: null
+  extracao: texto
+  chunks: 2
+- arquivo: MATERIAL DE APOIO Localização Brasil.pdf
+  formato: pdf
+  tamanho_kb: 10755
+  paginas: 84
+  origem: Material de apoio Localização Brasil (TAXBRA / NF)
+  tipo: referencia
+  processos: &id003
+  - localizacao_brasil
+  - verificacao_fatura
+  status: indexado
+  motivo_exclusao: null
+  extracao: texto
+  chunks: 55
+- arquivo: MM_CONTABILIZAÇÃO.pdf
+  formato: pdf
+  tamanho_kb: 1375
+  paginas: 18
+  origem: Nota técnica autoral
+  tipo: referencia
+  processos:
+  - entrada_mercadoria
+  - verificacao_fatura
+  status: indexado
+  motivo_exclusao: null
+  extracao: ocr
+  chunks: 6
+- arquivo: MM_SIEC_S4HANA_v2.docx
+  formato: docx
+  tamanho_kb: 746
+  paginas: null
+  origem: Documentação funcional S/4HANA
+  tipo: referencia
+  processos:
+  - dados_mestres
+  - pedido_compra
+  - entrada_mercadoria
+  status: indexado
+  motivo_exclusao: null
+  extracao: texto
+  chunks: 14
+- arquivo: Movimentos_SAP.pdf
+  formato: pdf
+  tamanho_kb: 137
+  paginas: 3
+  origem: Referência de tipos de movimento
+  tipo: referencia
+  processos:
+  - entrada_mercadoria
+  status: indexado
+  motivo_exclusao: null
+  extracao: texto
+  chunks: 8
+- arquivo: S99513.1.v1.3_EX.pdf
+  formato: pdf
+  tamanho_kb: 3822
+  paginas: 80
+  origem: SAP Education — material licenciado (exercícios, EN)
+  tipo: licenciado
+  processos: &id002 []
+  status: excluido
+  motivo_exclusao: licenciado, formato exercício — dilui o retriever
+  extracao: null
+  chunks: 0
+- arquivo: S99513.2.v1.3_EX.pdf
+  formato: pdf
+  tamanho_kb: 2651
+  paginas: 68
+  origem: SAP Education — material licenciado (exercícios, EN)
+  tipo: licenciado
+  processos: *id002
+  status: excluido
+  motivo_exclusao: licenciado, formato exercício — dilui o retriever
+  extracao: null
+  chunks: 0
+- arquivo: S99513.3.v1.3_EX.pdf
+  formato: pdf
+  tamanho_kb: 1851
+  paginas: 44
+  origem: SAP Education — material licenciado (exercícios, EN)
+  tipo: licenciado
+  processos: *id002
+  status: excluido
+  motivo_exclusao: licenciado, formato exercício — dilui o retriever
+  extracao: null
+  chunks: 0
+- arquivo: S99513.4.v1.3_EX.pdf
+  formato: pdf
+  tamanho_kb: 1148
+  paginas: 28
+  origem: SAP Education — material licenciado (exercícios, EN)
+  tipo: licenciado
+  processos: *id002
+  status: excluido
+  motivo_exclusao: licenciado, formato exercício — dilui o retriever
+  extracao: null
+  chunks: 0
+- arquivo: SAP Localização BR_MM.pdf
+  formato: pdf
+  tamanho_kb: 10991
+  paginas: 242
+  origem: Material de apoio Localização Brasil (TAXBRA / NF)
+  tipo: referencia
+  processos: *id003
+  status: indexado
+  motivo_exclusao: null
+  extracao: texto
+  chunks: 197
+- arquivo: SAP MM.pdf
+  formato: pdf
+  tamanho_kb: 2073
+  paginas: 53
+  origem: Apostila geral SAP MM
+  tipo: referencia
+  processos:
+  - dados_mestres
+  - pedido_compra
+  - entrada_mercadoria
+  status: indexado
+  motivo_exclusao: null
+  extracao: texto
+  chunks: 57
+- arquivo: SAP WM.pdf
+  formato: pdf
+  tamanho_kb: 1394
+  paginas: 48
+  origem: Apostila SAP WM
+  tipo: referencia
+  processos: []
+  status: excluido
+  motivo_exclusao: módulo fora do escopo (WM)
+  extracao: null
+  chunks: 0
+- arquivo: TS450_2_EN_Col23_EX_A4.pdf
+  formato: pdf
+  tamanho_kb: 4522
+  paginas: 219
+  origem: SAP Education — material licenciado (exercícios, EN)
+  tipo: licenciado
+  processos: *id002
+  status: excluido
+  motivo_exclusao: licenciado SAP Education, inglês, formato exercício — dilui o retriever
+  extracao: null
+  chunks: 0
+- arquivo: TS452_1_EN_Col23_EX_Ltr.pdf
+  formato: pdf
+  tamanho_kb: 4164
+  paginas: 186
+  origem: SAP Education — material licenciado (exercícios, EN)
+  tipo: licenciado
+  processos: *id002
+  status: excluido
+  motivo_exclusao: licenciado SAP Education, inglês, formato exercício — dilui o retriever
+  extracao: null
+  chunks: 0
+- arquivo: TS452_2_EN_Col23_EX_Ltr.pdf
+  formato: pdf
+  tamanho_kb: 10564
+  paginas: 221
+  origem: SAP Education — material licenciado (exercícios, EN)
+  tipo: licenciado
+  processos: *id002
+  status: excluido
+  motivo_exclusao: licenciado SAP Education, inglês, formato exercício — dilui o retriever
+  extracao: null
+  chunks: 0
+- arquivo: Transações sap todos módulos.xlsx
+  formato: xlsx
+  tamanho_kb: 56
+  paginas: null
+  origem: Planilha corporativa de transações (todos os módulos)
+  tipo: ontologia
+  processos: []
+  status: excluido
+  motivo_exclusao: consumida por build_ontology.py (vira catálogo/ontologia, não chunk)
+  extracao: null
+  chunks: 0

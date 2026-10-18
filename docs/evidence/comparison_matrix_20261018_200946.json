@@ -1,0 +1,320 @@
+{
+  "gemini": {
+    "arquivo": "run_gemini_20261018_200946.json",
+    "total": 11,
+    "com_erro": 3,
+    "tickets": {
+      "T01": {
+        "esperado": "RESPONDIDO + HITL para liberação",
+        "status": "RESPONDIDO",
+        "confianca": 0.99,
+        "requer_humano": true,
+        "fontes": 5,
+        "latencia_ms": 62336,
+        "erro": null
+      },
+      "T02": {
+        "esperado": "RESPONDIDO + HITL para abrir período",
+        "status": "RESPONDIDO",
+        "confianca": 0.99,
+        "requer_humano": true,
+        "fontes": 5,
+        "latencia_ms": 23215,
+        "erro": null
+      },
+      "T03": {
+        "esperado": "RESPONDIDO + HITL para liberar fatura",
+        "status": "RESPONDIDO",
+        "confianca": 0.99,
+        "requer_humano": true,
+        "fontes": 5,
+        "latencia_ms": 23567,
+        "erro": null
+      },
+      "T04": {
+        "esperado": "RESPONDIDO",
+        "status": "RESPONDIDO",
+        "confianca": 0.99,
+        "requer_humano": true,
+        "fontes": 5,
+        "latencia_ms": 29687,
+        "erro": null
+      },
+      "T05": {
+        "esperado": "AGUARDANDO_INFORMACOES",
+        "status": "AGUARDANDO_INFORMACOES",
+        "confianca": 0.0,
+        "requer_humano": false,
+        "fontes": 0,
+        "latencia_ms": 74062,
+        "erro": null
+      },
+      "T06": {
+        "esperado": "AGUARDANDO_INFORMACOES",
+        "status": "AGUARDANDO_INFORMACOES",
+        "confianca": 0.0,
+        "requer_humano": false,
+        "fontes": 0,
+        "latencia_ms": 19742,
+        "erro": null
+      },
+      "T07": {
+        "esperado": "FORA_ESCOPO",
+        "status": "FORA_ESCOPO",
+        "confianca": 0.0,
+        "requer_humano": false,
+        "fontes": 0,
+        "latencia_ms": 8595,
+        "erro": null
+      },
+      "T08": {
+        "esperado": "FORA_ESCOPO",
+        "status": "FORA_ESCOPO",
+        "confianca": 0.0,
+        "requer_humano": false,
+        "fontes": 0,
+        "latencia_ms": 27969,
+        "erro": null
+      },
+      "T09": {
+        "esperado": "RESPONDIDO",
+        "status": null,
+        "confianca": null,
+        "requer_humano": null,
+        "fontes": 0,
+        "latencia_ms": null,
+        "erro": "InternalServerError: Error code: 503 - [{'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}]"
+      },
+      "T10": {
+        "esperado": "RESPONDIDO",
+        "status": null,
+        "confianca": null,
+        "requer_humano": null,
+        "fontes": 0,
+        "latencia_ms": null,
+        "erro": "RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Q"
+      },
+      "T11": {
+        "esperado": "ESCALADO_HUMANO",
+        "status": null,
+        "confianca": null,
+        "requer_humano": null,
+        "fontes": 0,
+        "latencia_ms": null,
+        "erro": "RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Q"
+      }
+    }
+  },
+  "groq": {
+    "arquivo": "run_groq_20261018_200946.json",
+    "total": 11,
+    "com_erro": 0,
+    "tickets": {
+      "T01": {
+        "esperado": "RESPONDIDO + HITL para liberação",
+        "status": "RESPONDIDO",
+        "confianca": 0.967,
+        "requer_humano": true,
+        "fontes": 5,
+        "latencia_ms": 11015,
+        "erro": null
+      },
+      "T02": {
+        "esperado": "RESPONDIDO + HITL para abrir período",
+        "status": "RESPONDIDO",
+        "confianca": 0.986,
+        "requer_humano": true,
+        "fontes": 5,
+        "latencia_ms": 15846,
+        "erro": null
+      },
+      "T03": {
+        "esperado": "RESPONDIDO + HITL para liberar fatura",
+        "status": "FORA_ESCOPO",
+        "confianca": 0.0,
+        "requer_humano": false,
+        "fontes": 0,
+        "latencia_ms": 25198,
+        "erro": null
+      },
+      "T04": {
+        "esperado": "RESPONDIDO",
+        "status": "RESPONDIDO",
+        "confianca": 0.986,
+        "requer_humano": true,
+        "fontes": 5,
+        "latencia_ms": 36781,
+        "erro": null
+      },
+      "T05": {
+        "esperado": "AGUARDANDO_INFORMACOES",
+        "status": "AGUARDANDO_INFORMACOES",
+        "confianca": 0.0,
+        "requer_humano": false,
+        "fontes": 0,
+        "latencia_ms": 27506,
+        "erro": null
+      },
+      "T06": {
+        "esperado": "AGUARDANDO_INFORMACOES",
+        "status": "AGUARDANDO_INFORMACOES",
+        "confianca": 0.0,
+        "requer_humano": false,
+        "fontes": 0,
+        "latencia_ms": 9407,
+        "erro": null
+      },
+      "T07": {
+        "esperado": "FORA_ESCOPO",
+        "status": "FORA_ESCOPO",
+        "confianca": 0.0,
+        "requer_humano": false,
+        "fontes": 0,
+        "latencia_ms": 16905,
+        "erro": null
+      },
+      "T08": {
+        "esperado": "FORA_ESCOPO",
+        "status": "FORA_ESCOPO",
+        "confianca": 0.0,
+        "requer_humano": false,
+        "fontes": 0,
+        "latencia_ms": 14284,
+        "erro": null
+      },
+      "T09": {
+        "esperado": "RESPONDIDO",
+        "status": "RESPONDIDO",
+        "confianca": 0.984,
+        "requer_humano": true,
+        "fontes": 5,
+        "latencia_ms": 40462,
+        "erro": null
+      },
+      "T10": {
+        "esperado": "RESPONDIDO",
+        "status": "RESPONDIDO",
+        "confianca": 0.984,
+        "requer_humano": true,
+        "fontes": 5,
+        "latencia_ms": 46155,
+        "erro": null
+      },
+      "T11": {
+        "esperado": "ESCALADO_HUMANO",
+        "status": "ESCALADO_HUMANO",
+        "confianca": 0.956,
+        "requer_humano": true,
+        "fontes": 5,
+        "latencia_ms": 27901,
+        "erro": null
+      }
+    }
+  },
+  "ollama": {
+    "arquivo": "run_ollama_20261018_200946.json",
+    "total": 11,
+    "com_erro": 0,
+    "tickets": {
+      "T01": {
+        "esperado": "RESPONDIDO + HITL para liberação",
+        "status": "RESPONDIDO",
+        "confianca": 0.957,
+        "requer_humano": true,
+        "fontes": 5,
+        "latencia_ms": 20859,
+        "erro": null
+      },
+      "T02": {
+        "esperado": "RESPONDIDO + HITL para abrir período",
+        "status": "RESPONDIDO",
+        "confianca": 0.98,
+        "requer_humano": true,
+        "fontes": 5,
+        "latencia_ms": 19274,
+        "erro": null
+      },
+      "T03": {
+        "esperado": "RESPONDIDO + HITL para liberar fatura",
+        "status": "RESPONDIDO",
+        "confianca": 0.98,
+        "requer_humano": true,
+        "fontes": 5,
+        "latencia_ms": 17956,
+        "erro": null
+      },
+      "T04": {
+        "esperado": "RESPONDIDO",
+        "status": "RESPONDIDO",
+        "confianca": 0.98,
+        "requer_humano": true,
+        "fontes": 5,
+        "latencia_ms": 15475,
+        "erro": null
+      },
+      "T05": {
+        "esperado": "AGUARDANDO_INFORMACOES",
+        "status": "RESPONDIDO",
+        "confianca": 0.98,
+        "requer_humano": true,
+        "fontes": 5,
+        "latencia_ms": 12549,
+        "erro": null
+      },
+      "T06": {
+        "esperado": "AGUARDANDO_INFORMACOES",
+        "status": "FORA_ESCOPO",
+        "confianca": 0.0,
+        "requer_humano": false,
+        "fontes": 0,
+        "latencia_ms": 4051,
+        "erro": null
+      },
+      "T07": {
+        "esperado": "FORA_ESCOPO",
+        "status": "FORA_ESCOPO",
+        "confianca": 0.0,
+        "requer_humano": false,
+        "fontes": 0,
+        "latencia_ms": 2603,
+        "erro": null
+      },
+      "T08": {
+        "esperado": "FORA_ESCOPO",
+        "status": "FORA_ESCOPO",
+        "confianca": 0.0,
+        "requer_humano": false,
+        "fontes": 0,
+        "latencia_ms": 3867,
+        "erro": null
+      },
+      "T09": {
+        "esperado": "RESPONDIDO",
+        "status": "RESPONDIDO",
+        "confianca": 0.98,
+        "requer_humano": true,
+        "fontes": 5,
+        "latencia_ms": 22200,
+        "erro": null
+      },
+      "T10": {
+        "esperado": "RESPONDIDO",
+        "status": "RESPONDIDO",
+        "confianca": 0.98,
+        "requer_humano": true,
+        "fontes": 5,
+        "latencia_ms": 19527,
+        "erro": null
+      },
+      "T11": {
+        "esperado": "ESCALADO_HUMANO",
+        "status": "ESCALADO_HUMANO",
+        "confianca": 0.963,
+        "requer_humano": true,
+        "fontes": 5,
+        "latencia_ms": 16761,
+        "erro": null
+      }
+    }
+  }
+}

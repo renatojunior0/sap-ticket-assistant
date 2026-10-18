@@ -1,0 +1,28 @@
+# Ambientes virtuais e caches
+.venv/
+__pycache__/
+*.pyc
+.cache/
+.pytest_cache/
+
+# Segredos e variáveis de ambiente
+.env
+.streamlit/secrets.toml
+
+# Logs volumosos (manter apenas sample versionado)
+logs/*.jsonl
+!logs/audit_sample.jsonl
+
+# Documentos brutos (PDFs, DOCX, XLS de treinamento SAP)
+data/raw_docs/*
+!data/raw_docs/.gitkeep
+
+# Base vetorial intermediária / embeddings se gerados
+data/kb_chunks.jsonl
+
+# Configuração local de ferramentas de IA
+.agents/
+.claude/
+
+# Gerado a partir de material proprietário
+data/kb_chunks.jsonl

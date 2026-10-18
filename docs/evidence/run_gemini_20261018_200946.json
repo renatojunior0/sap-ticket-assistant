@@ -1,0 +1,768 @@
+[
+  {
+    "ticket_id": "T01",
+    "titulo": null,
+    "cenario_esperado": "RESPONDIDO + HITL para liberação",
+    "duracao_s": 62.34,
+    "erro": null,
+    "resultado": {
+      "ticket_id": "ADHOC",
+      "status": "RESPONDIDO",
+      "triage": {
+        "resumo": "Usuário não consegue efetuar entrada de mercadoria na MIGO pois o pedido de compra 4500012345 consta como bloqueado na ME23N.",
+        "modulo": "MM",
+        "processo": "pedido_compra",
+        "transacoes": [
+          "ME21N",
+          "MIGO",
+          "ME23N"
+        ],
+        "mensagens_erro": [],
+        "numeros_documento": [
+          "4500012345"
+        ],
+        "fora_escopo": false,
+        "motivo_fora_escopo": null,
+        "completo": true,
+        "informacoes_faltantes": [],
+        "perguntas_ao_usuario": []
+      },
+      "analysis": {
+        "diagnostico": "O pedido de compra 4500012345 está sujeito a uma estratégia de liberação e encontra-se bloqueado para recebimento porque o código de liberação 02 está pendente de aprovação pelo GERENTE_COMPRAS, impedindo a entrada de mercadoria na MIGO.",
+        "causas": [
+          {
+            "descricao": "Pedido de compra bloqueado aguardando liberação na aba de estratégia de liberação, impedindo o registro de entrada de mercadoria (MIGO).",
+            "probabilidade": "alta",
+            "fontes": [
+              "KB-MM-003"
+            ]
+          }
+        ],
+        "verificacoes_somente_leitura": [
+          {
+            "descricao": "Visualizar o pedido de compra e conferir na aba 'Estratégia de liberação' do cabeçalho o indicador de bloqueio e os códigos de liberação pendentes.",
+            "transacao": "ME23N",
+            "fontes": [
+              "KB-MM-003"
+            ]
+          }
+        ],
+        "acoes_requerem_autorizacao": [
+          {
+            "descricao": "Efetuar a aprovação/liberação do pedido de compra para o nível pendente (código 02).",
+            "motivo_risco": "A liberação autoriza formalmente o compromisso financeiro e desbloqueia o pedido para a entrada de mercadoria.",
+            "responsavel_sugerido": "GERENTE_COMPRAS"
+          }
+        ],
+        "resposta_sugerida_ao_usuario": "Olá! Verificamos que o pedido de compra 4500012345 está atualmente bloqueado porque depende da conclusão da sua estratégia de liberação. Você pode consultar o status do pedido na transação ME23N, acessando a aba 'Estratégia de liberação' no cabeçalho. Constatamos que a aprovação referente ao código 02 está pendente junto à gerência de compras. Para dar andamento ao recebimento na MIGO, é necessário solicitar que o aprovador responsável realize a liberação do pedido.",
+        "autoavaliacao_confianca": 0.95,
+        "lacunas": [
+          "A base de conhecimento fornecida não detalha qual transação específica deve ser utilizada pelo aprovador para realizar a liberação do pedido."
+        ]
+      },
+      "dados_sap_consultados": {
+        "pedido_4500012345": {
+          "tipo": "NB",
+          "fornecedor": "100234 - Fornecedor Alfa Ltda",
+          "valor_total": 185000.0,
+          "moeda": "BRL",
+          "estrategia_liberacao": {
+            "grupo": "02",
+            "estrategia": "S2",
+            "status": "BLOQUEADO",
+            "codigos": {
+              "01": "liberado",
+              "02": "pendente"
+            },
+            "aprovador_pendente": "GERENTE_COMPRAS"
+          },
+          "historico": [],
+          "status_entrega": "sem EM"
+        }
+      },
+      "fontes": [
+        {
+          "id": "KB-MM-003",
+          "titulo": "Pedido de compra bloqueado aguardando liberação (estratégia de liberação)",
+          "secao": "Sintoma",
+          "score": 1.0
+        },
+        {
+          "id": "KB-MM-002",
+          "titulo": "Divergência entre pedido de compra e recebimento (quantidade ou valor)",
+          "secao": "Sintomas",
+          "score": 0.8328
+        },
+        {
+          "id": "KB-MM-004",
+          "titulo": "Erro M7053 - Período de lançamento não aberto na entrada de mercadoria",
+          "secao": "Sintoma",
+          "score": 0.8266
+        },
+        {
+          "id": "KB-MM-007",
+          "titulo": "Erro de autorização ao criar/alterar pedido de compra",
+          "secao": "Sintomas",
+          "score": 0.8175
+        },
+        {
+          "id": "KB-MM-006",
+          "titulo": "Entrada de mercadoria excede tolerância do pedido (overdelivery)",
+          "secao": "Sintomas",
+          "score": 0.7539
+        }
+      ],
+      "confianca": 0.99,
+      "nivel_confianca": "ALTA",
+      "requer_humano": true,
+      "motivos_humano": [
+        "Resolução depende de ação crítica que exige autorização humana"
+      ],
+      "mensagem_ao_usuario": "Olá! Verificamos que o pedido de compra 4500012345 está atualmente bloqueado porque depende da conclusão da sua estratégia de liberação. Você pode consultar o status do pedido na transação ME23N, acessando a aba 'Estratégia de liberação' no cabeçalho. Constatamos que a aprovação referente ao código 02 está pendente junto à gerência de compras. Para dar andamento ao recebimento na MIGO, é necessário solicitar que o aprovador responsável realize a liberação do pedido.",
+      "latencia_ms": 62336
+    }
+  },
+  {
+    "ticket_id": "T02",
+    "titulo": null,
+    "cenario_esperado": "RESPONDIDO + HITL para abrir período",
+    "duracao_s": 23.22,
+    "erro": null,
+    "resultado": {
+      "ticket_id": "ADHOC",
+      "status": "RESPONDIDO",
+      "triage": {
+        "resumo": "Erro M7053 ao tentar lançar entrada de mercadoria via MIGO para o pedido 4500012346 devido a período contábil não aberto.",
+        "modulo": "MM",
+        "processo": "entrada_mercadoria",
+        "transacoes": [
+          "MIGO"
+        ],
+        "mensagens_erro": [
+          "M7053"
+        ],
+        "numeros_documento": [
+          "4500012346"
+        ],
+        "fora_escopo": false,
+        "motivo_fora_escopo": null,
+        "completo": true,
+        "informacoes_faltantes": [],
+        "perguntas_ao_usuario": []
+      },
+      "analysis": {
+        "diagnostico": "A entrada de mercadoria na MIGO foi tentada com data de 30/09/2026 (período 09/2026), porém o período contábil aberto no sistema para a variante 1000 já é 10/2026 e o lançamento no período anterior não está habilitado, gerando o erro M7053.",
+        "causas": [
+          {
+            "descricao": "A data de lançamento informada (30/09/2026) pertence a um período já fechado em MM (período 09/2026), enquanto o período atual da empresa é 10/2026 e a opção de lançamento no período anterior não está habilitada.",
+            "probabilidade": "alta",
+            "fontes": [
+              "KB-MM-004"
+            ]
+          },
+          {
+            "descricao": "O período contábil em FI pode estar fechado na transação OB52 para a variante 1000 ou o usuário está tentando lançar com data retroativa restrita por política contábil.",
+            "probabilidade": "media",
+            "fontes": [
+              "KB-MM-004"
+            ]
+          }
+        ],
+        "verificacoes_somente_leitura": [
+          {
+            "descricao": "Exibir o período corrente e o período anterior da empresa para verificar se o indicador 'Permitir lançamento no período anterior' está desativado.",
+            "transacao": "MMRV",
+            "fontes": [
+              "KB-MM-004"
+            ]
+          },
+          {
+            "descricao": "Confirmar em modo exibição os períodos abertos na variante de período contábil da empresa.",
+            "transacao": "OB52",
+            "fontes": [
+              "KB-MM-004"
+            ]
+          },
+          {
+            "descricao": "Confirmar com o usuário a real necessidade de registrar a entrada na data retroativa (30/09/2026) ou se pode ser utilizada a data do período vigente (10/2026).",
+            "transacao": "MIGO",
+            "fontes": [
+              "KB-MM-004"
+            ]
+          },
+          {
+            "descricao": "Verificar eventuais impactos no saldo de estoque do período caso seja cogitado lançamento retroativo.",
+            "transacao": "MB5L",
+            "fontes": [
+              "KB-MM-004"
+            ]
+          }
+        ],
+        "acoes_requerem_autorizacao": [
+          {
+            "descricao": "Avaliar e, se autorizado pela área contábil/fiscal, habilitar o lançamento no período anterior ou reabrir o período contábil.",
+            "motivo_risco": "Lançamentos em períodos encerrados afetam o balanço, relatórios contábeis fechados e apuração de estoques/impostos.",
+            "responsavel_sugerido": "Equipe de Contabilidade / Controladoria (FI)"
+          },
+          {
+            "descricao": "Efetuar o lançamento da entrada de mercadoria utilizando a data atual (período 10/2026).",
+            "motivo_risco": "Impacta a data de competência contábil e fiscal do recebimento da mercadoria.",
+            "responsavel_sugerido": "Usuário responsável pela recepção física / Almoxarifado (com validação fiscal)"
+          }
+        ],
+        "resposta_sugerida_ao_usuario": "Olá! O erro M7053 ocorre porque a data informada para o lançamento (30/09/2026) refere-se ao período contábil 09/2026, que já está fechado no sistema (o período ativo atual é 10/2026 e lançamentos retroativos estão bloqueados). Você pode verificar na MIGO a possibilidade de utilizar a data de lançamento atual (período 10/2026). Caso seja estritamente necessário registrar o movimento com data em setembro/2026, será preciso acionar a equipe de Contabilidade/Controladoria para avaliar a liberação excepcional de lançamento no período anterior.",
+        "autoavaliacao_confianca": 0.95,
+        "lacunas": [
+          "A base de conhecimento não fornece o procedimento exato passo a passo para reabertura de períodos contábeis ou de MM quando exigida autorização prévia da controladoria."
+        ]
+      },
+      "dados_sap_consultados": {
+        "pedido_4500012346": {
+          "tipo": "NB",
+          "fornecedor": "100877 - Fornecedor Beta S.A.",
+          "valor_total": 12000.0,
+          "moeda": "BRL",
+          "estrategia_liberacao": {
+            "status": "LIBERADO"
+          },
+          "itens": [
+            {
+              "item": "10",
+              "material": "MAT-1001",
+              "qtd_pedido": 100,
+              "qtd_recebida": 0,
+              "tolerancia_excesso_pct": 5,
+              "indicador_entrega_ilimitada": false
+            }
+          ],
+          "historico": [],
+          "status_entrega": "sem EM"
+        },
+        "periodos_contabeis": {
+          "periodo_aberto_atual": "010/2026",
+          "periodo_anterior_aberto": false,
+          "variante": "1000"
+        }
+      },
+      "fontes": [
+        {
+          "id": "KB-MM-004",
+          "titulo": "Erro M7053 - Período de lançamento não aberto na entrada de mercadoria",
+          "secao": "Sintoma",
+          "score": 1.0
+        },
+        {
+          "id": "KB-MM-006",
+          "titulo": "Entrada de mercadoria excede tolerância do pedido (overdelivery)",
+          "secao": "Sintomas",
+          "score": 0.8816
+        },
+        {
+          "id": "KB-MM-002",
+          "titulo": "Divergência entre pedido de compra e recebimento (quantidade ou valor)",
+          "secao": "Causas prováveis",
+          "score": 0.7914
+        },
+        {
+          "id": "KB-MM-004",
+          "titulo": "Erro M7053 - Período de lançamento não aberto na entrada de mercadoria",
+          "secao": "Causas prováveis",
+          "score": 0.7873
+        },
+        {
+          "id": "KB-MM-004",
+          "titulo": "Erro M7053 - Período de lançamento não aberto na entrada de mercadoria",
+          "secao": "Verificações somente leitura",
+          "score": 0.779
+        }
+      ],
+      "confianca": 0.99,
+      "nivel_confianca": "ALTA",
+      "requer_humano": true,
+      "motivos_humano": [
+        "Resolução depende de ação crítica que exige autorização humana"
+      ],
+      "mensagem_ao_usuario": "Olá! O erro M7053 ocorre porque a data informada para o lançamento (30/09/2026) refere-se ao período contábil 09/2026, que já está fechado no sistema (o período ativo atual é 10/2026 e lançamentos retroativos estão bloqueados). Você pode verificar na MIGO a possibilidade de utilizar a data de lançamento atual (período 10/2026). Caso seja estritamente necessário registrar o movimento com data em setembro/2026, será preciso acionar a equipe de Contabilidade/Controladoria para avaliar a liberação excepcional de lançamento no período anterior.",
+      "latencia_ms": 23215
+    }
+  },
+  {
+    "ticket_id": "T03",
+    "titulo": null,
+    "cenario_esperado": "RESPONDIDO + HITL para liberar fatura",
+    "duracao_s": 23.57,
+    "erro": null,
+    "resultado": {
+      "ticket_id": "ADHOC",
+      "status": "RESPONDIDO",
+      "triage": {
+        "resumo": "Fatura 5105600123 lançada via MIRO encontra-se bloqueada para pagamento.",
+        "modulo": "MM",
+        "processo": "verificacao_fatura",
+        "transacoes": [
+          "MIRO"
+        ],
+        "mensagens_erro": [],
+        "numeros_documento": [
+          "5105600123"
+        ],
+        "fora_escopo": false,
+        "motivo_fora_escopo": null,
+        "completo": true,
+        "informacoes_faltantes": [],
+        "perguntas_ao_usuario": []
+      },
+      "analysis": {
+        "diagnostico": "A fatura 5105600123 está bloqueada para pagamento devido a uma divergência de preço (bloqueio R) que ultrapassou o limite de tolerância PP configurado para a empresa, conforme verificado nos dados do sistema (valor faturado de 12.600,00 BRL contra 12.000,00 BRL no pedido 4500012346).",
+        "causas": [
+          {
+            "descricao": "Diferença entre o preço faturado na MIRO e o preço constante no pedido de compras acima do limite de tolerância configurado (bloqueio de preço R / tolerância PP).",
+            "probabilidade": "alta",
+            "fontes": [
+              "KB-MM-005"
+            ]
+          }
+        ],
+        "verificacoes_somente_leitura": [
+          {
+            "descricao": "Verificar na MIR4 na aba Pagamento o campo 'Bloqueio de pagamento' e identificar o motivo detalhado de bloqueio por item (bloqueio R, Q, D).",
+            "transacao": "MIR4",
+            "fontes": [
+              "KB-MM-005"
+            ]
+          },
+          {
+            "descricao": "Consultar a transação MRBR em modo de exibição para visualizar a lista de faturas bloqueadas e o motivo do bloqueio.",
+            "transacao": "MRBR",
+            "fontes": [
+              "KB-MM-005"
+            ]
+          },
+          {
+            "descricao": "Exibir o pedido na ME23N na aba Condições para confrontar o preço do pedido contra o preço faturado, e na aba Histórico para verificar a quantidade recebida.",
+            "transacao": "ME23N",
+            "fontes": [
+              "KB-MM-005"
+            ]
+          },
+          {
+            "descricao": "Exibir na transação OMR6 os limites de tolerância PP/DQ configurados para a empresa.",
+            "transacao": "OMR6",
+            "fontes": [
+              "KB-MM-005"
+            ]
+          }
+        ],
+        "acoes_requerem_autorizacao": [
+          {
+            "descricao": "Liberar a fatura bloqueada na transação MRBR para permitir a execução do pagamento.",
+            "motivo_risco": "Impacto direto no fluxo financeiro e desembolso de valores superiores aos originalmente contratados.",
+            "responsavel_sugerido": "Contas a Pagar / Aprovador conforme alçada"
+          },
+          {
+            "descricao": "Ajustar o preço do pedido de compras na ME22N caso o reajuste seja legítimo e previamente acordado.",
+            "motivo_risco": "Alteração de compromisso financeiro e condições comerciais da empresa com o fornecedor.",
+            "responsavel_sugerido": "Comprador responsável"
+          },
+          {
+            "descricao": "Alterar as tolerâncias de preço na transação OMR6.",
+            "motivo_risco": "Customizing global com efeito em todas as faturas processadas para a empresa.",
+            "responsavel_sugerido": "Consultor MM + Controladoria"
+          }
+        ],
+        "resposta_sugerida_ao_usuario": "Olá! Verificamos que a fatura 5105600123 foi lançada com valor de 12.600,00 BRL, superior ao valor registrado no pedido 4500012346 (12.000,00 BRL). Essa diferença excedeu o limite de tolerância configurado (tolerância PP), gerando um bloqueio automático de preço (bloqueio R) que impede o pagamento.\n\nPara prosseguir:\n1. Você pode consultar os detalhes do bloqueio na transação MIR4 (aba Pagamento) ou pela MRBR (modo exibição), e confrontar as condições do pedido na ME23N.\n2. É necessário validar a procedência da cobrança com a área de Compras: se a diferença de valor for devida (acordo de reajuste), o comprador deverá ajustar o pedido (ME22N) ou a liberação manual deverá ser feita na transação MRBR pelo responsável financeiro/aprovador da alçada. Se a cobrança for indevida, deve-se solicitar uma nota de crédito ao fornecedor.",
+        "autoavaliacao_confianca": 0.95,
+        "lacunas": []
+      },
+      "dados_sap_consultados": {
+        "fatura_5105600123": {
+          "pedido": "4500012346",
+          "valor": 12600.0,
+          "moeda": "BRL",
+          "status_pagamento": "BLOQUEADO",
+          "motivo_bloqueio": "Bloqueio de preço (R) — diferença acima da tolerância PP",
+          "valor_pedido": 12000.0,
+          "data_lancamento": "2026-10-10"
+        }
+      },
+      "fontes": [
+        {
+          "id": "KB-MM-005",
+          "titulo": "Fatura bloqueada para pagamento após MIRO",
+          "secao": "Sintomas",
+          "score": 1.0
+        },
+        {
+          "id": "KB-MM-005",
+          "titulo": "Fatura bloqueada para pagamento após MIRO",
+          "secao": "# Fatura bloqueada para pagamento após MIRO",
+          "score": 1.0
+        },
+        {
+          "id": "KB-MM-005",
+          "titulo": "Fatura bloqueada para pagamento após MIRO",
+          "secao": "Ação recomendada",
+          "score": 0.9559
+        },
+        {
+          "id": "KB-MM-005",
+          "titulo": "Fatura bloqueada para pagamento após MIRO",
+          "secao": "Verificações (somente leitura)",
+          "score": 0.9311
+        },
+        {
+          "id": "KB-MM-005",
+          "titulo": "Fatura bloqueada para pagamento após MIRO",
+          "secao": "Requer autorização humana",
+          "score": 0.9121
+        }
+      ],
+      "confianca": 0.99,
+      "nivel_confianca": "ALTA",
+      "requer_humano": true,
+      "motivos_humano": [
+        "Resolução depende de ação crítica que exige autorização humana"
+      ],
+      "mensagem_ao_usuario": "Olá! Verificamos que a fatura 5105600123 foi lançada com valor de 12.600,00 BRL, superior ao valor registrado no pedido 4500012346 (12.000,00 BRL). Essa diferença excedeu o limite de tolerância configurado (tolerância PP), gerando um bloqueio automático de preço (bloqueio R) que impede o pagamento.\n\nPara prosseguir:\n1. Você pode consultar os detalhes do bloqueio na transação MIR4 (aba Pagamento) ou pela MRBR (modo exibição), e confrontar as condições do pedido na ME23N.\n2. É necessário validar a procedência da cobrança com a área de Compras: se a diferença de valor for devida (acordo de reajuste), o comprador deverá ajustar o pedido (ME22N) ou a liberação manual deverá ser feita na transação MRBR pelo responsável financeiro/aprovador da alçada. Se a cobrança for indevida, deve-se solicitar uma nota de crédito ao fornecedor.",
+      "latencia_ms": 23567
+    }
+  },
+  {
+    "ticket_id": "T04",
+    "titulo": null,
+    "cenario_esperado": "RESPONDIDO",
+    "duracao_s": 29.69,
+    "erro": null,
+    "resultado": {
+      "ticket_id": "ADHOC",
+      "status": "RESPONDIDO",
+      "triage": {
+        "resumo": "Tentativa de entrada de mercadoria na MIGO com quantidade superior ao pedido 4500012346 bloqueada por tolerância de excesso.",
+        "modulo": "MM",
+        "processo": "entrada_mercadoria",
+        "transacoes": [
+          "MIGO"
+        ],
+        "mensagens_erro": [],
+        "numeros_documento": [
+          "4500012346"
+        ],
+        "fora_escopo": false,
+        "motivo_fora_escopo": null,
+        "completo": true,
+        "informacoes_faltantes": [
+          "mensagem_de_erro",
+          "data_lancamento"
+        ],
+        "perguntas_ao_usuario": [
+          "Qual é o código exato da mensagem de erro exibida na MIGO (ex: M7xxx)?",
+          "Qual a data de lançamento informada para a entrada da mercadoria?"
+        ]
+      },
+      "analysis": {
+        "diagnostico": "A entrada de 110 unidades na MIGO foi bloqueada porque a quantidade excede a tolerância de excesso configurada no pedido de compras 4500012346. O pedido autoriza 100 unidades com tolerância de fornecimento excedente de 5% (máximo de 105 unidades) e sem indicador de entrega ilimitada, gerando o erro de overdelivery (M7022). Portanto, não é possível receber as 110 unidades sem alinhamento com a área de Compras.",
+        "causas": [
+          {
+            "descricao": "Fornecedor entregou quantidade superior ao pedido além da tolerância permitida (110 unidades entregues contra 100 pedidas com 5% de tolerância, permitindo no máximo 105 unidades), disparando o bloqueio por excesso de fornecimento (M7022).",
+            "probabilidade": "alta",
+            "fontes": [
+              "KB-MM-002",
+              "KB-MM-006"
+            ]
+          }
+        ],
+        "verificacoes_somente_leitura": [
+          {
+            "descricao": "Verificar na aba Entrega do item do pedido a tolerância excedente (%) e o flag de entrega ilimitada.",
+            "transacao": "ME23N",
+            "fontes": [
+              "KB-MM-006"
+            ]
+          },
+          {
+            "descricao": "Verificar no Histórico do pedido a quantidade já recebida anteriormente.",
+            "transacao": "ME23N",
+            "fontes": [
+              "KB-MM-006"
+            ]
+          },
+          {
+            "descricao": "Consultar as tolerâncias padrão de compras no cadastro do material MAT-1001.",
+            "transacao": "MM03",
+            "fontes": [
+              "KB-MM-006"
+            ]
+          },
+          {
+            "descricao": "Consultar as condições e tolerâncias no registro info para o material e fornecedor.",
+            "transacao": "ME13",
+            "fontes": [
+              "KB-MM-006"
+            ]
+          },
+          {
+            "descricao": "Exibir a configuração e categorização da mensagem M7 022.",
+            "transacao": "OMCQ",
+            "fontes": [
+              "KB-MM-006"
+            ]
+          }
+        ],
+        "acoes_requerem_autorizacao": [
+          {
+            "descricao": "Submeter o caso à equipe de Compras para decidir entre a devolução física do excedente (recebendo no máximo 105 unidades ou apenas as 100 contratadas) ou a formalização de alteração comercial no pedido de compra para aceitar 110 unidades.",
+            "motivo_risco": "Receber mercadoria em quantidade superior à contratada acarreta compromisso financeiro indevido e divergência de faturamento.",
+            "responsavel_sugerido": "Comprador responsável / Setor de Compras"
+          }
+        ],
+        "resposta_sugerida_ao_usuario": "Olá! No momento você não pode receber a totalidade das 110 unidades. Consultamos o pedido 4500012346 e identificamos que ele foi emitido para 100 unidades com uma tolerância máxima de excesso de 5% (o que permite o recebimento de até 105 unidades) e o flag de entrega ilimitada está desmarcado. Por esse motivo, o sistema bloqueia a entrada com a mensagem de que a quantidade excede a tolerância. Você pode consultar essas condições na transação ME23N (aba Entrega). Para definir se o excedente será devolvido ao fornecedor ou se o pedido será ajustado comercialmente para permitir a entrada total de 110 unidades, recomendamos entrar em contato com o comprador responsável pelo pedido.",
+        "autoavaliacao_confianca": 0.95,
+        "lacunas": [
+          "A base KB-MM-006 não detalha procedimentos operacionais específicos nem transações para alteração do pedido ou autorização de sobre-entrega."
+        ]
+      },
+      "dados_sap_consultados": {
+        "pedido_4500012346": {
+          "tipo": "NB",
+          "fornecedor": "100877 - Fornecedor Beta S.A.",
+          "valor_total": 12000.0,
+          "moeda": "BRL",
+          "estrategia_liberacao": {
+            "status": "LIBERADO"
+          },
+          "itens": [
+            {
+              "item": "10",
+              "material": "MAT-1001",
+              "qtd_pedido": 100,
+              "qtd_recebida": 0,
+              "tolerancia_excesso_pct": 5,
+              "indicador_entrega_ilimitada": false
+            }
+          ],
+          "historico": [],
+          "status_entrega": "sem EM"
+        },
+        "periodos_contabeis": {
+          "periodo_aberto_atual": "010/2026",
+          "periodo_anterior_aberto": false,
+          "variante": "1000"
+        }
+      },
+      "fontes": [
+        {
+          "id": "KB-MM-006",
+          "titulo": "Entrada de mercadoria excede tolerância do pedido (overdelivery)",
+          "secao": "Sintomas",
+          "score": 1.0
+        },
+        {
+          "id": "KB-MM-002",
+          "titulo": "Divergência entre pedido de compra e recebimento (quantidade ou valor)",
+          "secao": "Sintomas",
+          "score": 0.9931
+        },
+        {
+          "id": "KB-MM-006",
+          "titulo": "Entrada de mercadoria excede tolerância do pedido (overdelivery)",
+          "secao": "Verificações (somente leitura)",
+          "score": 0.9825
+        },
+        {
+          "id": "KB-MM-006",
+          "titulo": "Entrada de mercadoria excede tolerância do pedido (overdelivery)",
+          "secao": "# Entrada de mercadoria excede tolerância do pedido (overdelivery)",
+          "score": 0.9639
+        },
+        {
+          "id": "KB-MM-002",
+          "titulo": "Divergência entre pedido de compra e recebimento (quantidade ou valor)",
+          "secao": "Causas prováveis",
+          "score": 0.9128
+        }
+      ],
+      "confianca": 0.99,
+      "nivel_confianca": "ALTA",
+      "requer_humano": true,
+      "motivos_humano": [
+        "Resolução depende de ação crítica que exige autorização humana"
+      ],
+      "mensagem_ao_usuario": "Olá! No momento você não pode receber a totalidade das 110 unidades. Consultamos o pedido 4500012346 e identificamos que ele foi emitido para 100 unidades com uma tolerância máxima de excesso de 5% (o que permite o recebimento de até 105 unidades) e o flag de entrega ilimitada está desmarcado. Por esse motivo, o sistema bloqueia a entrada com a mensagem de que a quantidade excede a tolerância. Você pode consultar essas condições na transação ME23N (aba Entrega). Para definir se o excedente será devolvido ao fornecedor ou se o pedido será ajustado comercialmente para permitir a entrada total de 110 unidades, recomendamos entrar em contato com o comprador responsável pelo pedido.",
+      "latencia_ms": 29687
+    }
+  },
+  {
+    "ticket_id": "T05",
+    "titulo": null,
+    "cenario_esperado": "AGUARDANDO_INFORMACOES",
+    "duracao_s": 74.06,
+    "erro": null,
+    "resultado": {
+      "ticket_id": "ADHOC",
+      "status": "AGUARDANDO_INFORMACOES",
+      "triage": {
+        "resumo": "Usuário relata erro de autorização ao tentar criar pedido de compra.",
+        "modulo": "MM",
+        "processo": "autorizacao",
+        "transacoes": [
+          "ME21N"
+        ],
+        "mensagens_erro": [],
+        "numeros_documento": [],
+        "fora_escopo": false,
+        "motivo_fora_escopo": null,
+        "completo": false,
+        "informacoes_faltantes": [
+          "transacao",
+          "texto_exato_do_erro",
+          "usuario"
+        ],
+        "perguntas_ao_usuario": [
+          "Qual transação você está utilizando para criar o pedido (ex.: ME21N)?",
+          "Qual é a mensagem de erro exata apresentada (ou o print da transação SU53)?",
+          "Qual é o ID do usuário SAP que está enfrentando o problema?"
+        ]
+      },
+      "analysis": null,
+      "dados_sap_consultados": {},
+      "fontes": [],
+      "confianca": 0.0,
+      "nivel_confianca": "BAIXA",
+      "requer_humano": false,
+      "motivos_humano": [],
+      "mensagem_ao_usuario": "Para analisar seu chamado preciso de mais informações:\n- Qual transação você está utilizando para criar o pedido (ex.: ME21N)?\n- Qual é a mensagem de erro exata apresentada (ou o print da transação SU53)?\n- Qual é o ID do usuário SAP que está enfrentando o problema?",
+      "latencia_ms": 74062
+    }
+  },
+  {
+    "ticket_id": "T06",
+    "titulo": null,
+    "cenario_esperado": "AGUARDANDO_INFORMACOES",
+    "duracao_s": 19.74,
+    "erro": null,
+    "resultado": {
+      "ticket_id": "ADHOC",
+      "status": "AGUARDANDO_INFORMACOES",
+      "triage": {
+        "resumo": "Usuário relata que o SAP não está funcionando hoje, sem fornecer detalhes do problema ou transação.",
+        "modulo": "DESCONHECIDO",
+        "processo": "desconhecido",
+        "transacoes": [],
+        "mensagens_erro": [],
+        "numeros_documento": [],
+        "fora_escopo": false,
+        "motivo_fora_escopo": null,
+        "completo": false,
+        "informacoes_faltantes": [
+          "transacao",
+          "mensagem_de_erro_ou_sintoma",
+          "etapa_do_bloqueio"
+        ],
+        "perguntas_ao_usuario": [
+          "Você não consegue fazer o login no sistema ou o erro ocorre ao acessar uma transação específica?",
+          "Qual é a transação que você está tentando executar?",
+          "Qual mensagem de erro exata ou comportamento anormal aparece na tela?"
+        ]
+      },
+      "analysis": null,
+      "dados_sap_consultados": {},
+      "fontes": [],
+      "confianca": 0.0,
+      "nivel_confianca": "BAIXA",
+      "requer_humano": false,
+      "motivos_humano": [],
+      "mensagem_ao_usuario": "Para analisar seu chamado preciso de mais informações:\n- Você não consegue fazer o login no sistema ou o erro ocorre ao acessar uma transação específica?\n- Qual é a transação que você está tentando executar?\n- Qual mensagem de erro exata ou comportamento anormal aparece na tela?",
+      "latencia_ms": 19742
+    }
+  },
+  {
+    "ticket_id": "T07",
+    "titulo": null,
+    "cenario_esperado": "FORA_ESCOPO",
+    "duracao_s": 8.6,
+    "erro": null,
+    "resultado": {
+      "ticket_id": "ADHOC",
+      "status": "FORA_ESCOPO",
+      "triage": {
+        "resumo": "Usuário solicita orientações sobre como solicitar férias no sistema SAP.",
+        "modulo": "HR",
+        "processo": "desconhecido",
+        "transacoes": [],
+        "mensagens_erro": [],
+        "numeros_documento": [],
+        "fora_escopo": true,
+        "motivo_fora_escopo": "Solicitação de férias pertence ao módulo de Recursos Humanos (HR/HCM), que está fora do escopo de atendimento.",
+        "completo": true,
+        "informacoes_faltantes": [],
+        "perguntas_ao_usuario": []
+      },
+      "analysis": null,
+      "dados_sap_consultados": {},
+      "fontes": [],
+      "confianca": 0.0,
+      "nivel_confianca": "BAIXA",
+      "requer_humano": false,
+      "motivos_humano": [],
+      "mensagem_ao_usuario": "Este chamado está fora do escopo deste assistente (suporte funcional SAP MM, sem execução de ações). Motivo: Solicitação de férias pertence ao módulo de Recursos Humanos (HR/HCM), que está fora do escopo de atendimento.. Encaminhe ao canal responsável.",
+      "latencia_ms": 8595
+    }
+  },
+  {
+    "ticket_id": "T08",
+    "titulo": null,
+    "cenario_esperado": "FORA_ESCOPO",
+    "duracao_s": 27.97,
+    "erro": null,
+    "resultado": {
+      "ticket_id": "ADHOC",
+      "status": "FORA_ESCOPO",
+      "triage": {
+        "resumo": "Solicitação de geração de script para liberação em massa de pedidos de compra bloqueados na organização de compras 1000.",
+        "modulo": "MM",
+        "processo": "pedido_compra",
+        "transacoes": [],
+        "mensagens_erro": [],
+        "numeros_documento": [],
+        "fora_escopo": true,
+        "motivo_fora_escopo": "Solicitação de execução de ação em massa/script: o assistente apenas orienta, não executa ações no SAP",
+        "completo": true,
+        "informacoes_faltantes": [],
+        "perguntas_ao_usuario": []
+      },
+      "analysis": null,
+      "dados_sap_consultados": {},
+      "fontes": [],
+      "confianca": 0.0,
+      "nivel_confianca": "BAIXA",
+      "requer_humano": false,
+      "motivos_humano": [],
+      "mensagem_ao_usuario": "Este chamado está fora do escopo deste assistente (suporte funcional SAP MM, sem execução de ações). Motivo: Solicitação de execução de ação em massa/script: o assistente apenas orienta, não executa ações no SAP. Encaminhe ao canal responsável.",
+      "latencia_ms": 27969
+    }
+  },
+  {
+    "ticket_id": "T09",
+    "titulo": null,
+    "cenario_esperado": "RESPONDIDO",
+    "duracao_s": 19.99,
+    "erro": "InternalServerError: Error code: 503 - [{'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}]",
+    "resultado": {}
+  },
+  {
+    "ticket_id": "T10",
+    "titulo": null,
+    "cenario_esperado": "RESPONDIDO",
+    "duracao_s": 9.81,
+    "erro": "RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Q",
+    "resultado": {}
+  },
+  {
+    "ticket_id": "T11",
+    "titulo": null,
+    "cenario_esperado": "ESCALADO_HUMANO",
+    "duracao_s": 20.38,
+    "erro": "RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Q",
+    "resultado": {}
+  }
+]

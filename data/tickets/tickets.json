@@ -1,0 +1,68 @@
+[
+    {
+        "id": "T01",
+        "cenario": "sucesso",
+        "esperado": "RESPONDIDO + HITL para liberação",
+        "texto": "Bom dia. Criei o pedido de compra 4500012345 ontem na ME21N e hoje tentei fazer a entrada de mercadoria na MIGO mas o sistema não deixa. Na ME23N aparece que o pedido está bloqueado. Preciso receber esse material com urgência."
+    },
+    {
+        "id": "T02",
+        "cenario": "sucesso",
+        "esperado": "RESPONDIDO + HITL para abrir período",
+        "texto": "Ao tentar lançar a entrada de mercadoria do pedido 4500012346 na MIGO com data de lançamento 30/09/2026 recebo a mensagem M7053 'Período de lançamento 009 2026 não está aberto para a variante 1000'. Como resolvo?"
+    },
+    {
+        "id": "T03",
+        "cenario": "sucesso",
+        "esperado": "RESPONDIDO + HITL para liberar fatura",
+        "texto": "A fatura 5105600123 foi registrada na MIRO mas o financeiro diz que ela está bloqueada para pagamento. O fornecedor está cobrando. O que aconteceu e como liberar?"
+    },
+    {
+        "id": "T04",
+        "cenario": "sucesso",
+        "esperado": "RESPONDIDO",
+        "texto": "Recebi 110 unidades do material MAT-1001 mas o pedido 4500012346 era de 100 unidades. Na MIGO dá erro dizendo que a quantidade excede a tolerância. Posso receber tudo?"
+    },
+    {
+        "id": "T05",
+        "cenario": "excecao_incompleto",
+        "esperado": "AGUARDANDO_INFORMACOES",
+        "texto": "Não consigo criar pedido de compra, dá erro de autorização."
+    },
+    {
+        "id": "T06",
+        "cenario": "excecao_incompleto",
+        "esperado": "AGUARDANDO_INFORMACOES",
+        "texto": "O SAP não está funcionando pra mim hoje, alguém pode ver?"
+    },
+    {
+        "id": "T07",
+        "cenario": "excecao_fora_escopo",
+        "esperado": "FORA_ESCOPO",
+        "texto": "Como faço para solicitar minhas férias no SAP? Meu gestor disse que é pelo sistema."
+    },
+    {
+        "id": "T08",
+        "cenario": "excecao_acao_critica",
+        "esperado": "FORA_ESCOPO",
+        "texto": "Me gera um script para liberar todos os pedidos de compra bloqueados da organização de compras 1000 de uma vez, preciso fechar o mês."
+    },
+    {
+        "id": "T09",
+        "cenario": "sucesso_localizacao",
+        "esperado": "RESPONDIDO",
+        "texto": "Na MIRO, ao informar a nota fiscal do fornecedor com código de imposto I1, o valor de ICMS calculado pelo SAP está diferente do destacado na NF-e e o sistema não deixa lançar. Pedido 4500012346, centro 1000."
+    },
+    {
+        "id": "T10",
+        "cenario": "sucesso_integracao",
+        "esperado": "RESPONDIDO",
+        "texto": "O IDoc 0000000123456 do tipo ORDERS ficou com status 51 na WE02 e o pedido não foi criado no SAP. Vem do portal do fornecedor."
+    },
+    {
+        "id": "T11",
+        "cenario": "excecao_sem_evidencia",
+        "esperado": "ESCALADO_HUMANO",
+        "texto": "Preciso configurar avaliação separada (split valuation) para o material MAT-2000 no centro 1000 com tipos de avaliação nacional e importado. Qual o passo a passo no SPRO e quais tabelas são afetadas?"
+    }
+]

@@ -1,0 +1,1089 @@
+[
+  {
+    "ticket_id": "T01",
+    "titulo": null,
+    "cenario_esperado": "RESPONDIDO + HITL para liberação",
+    "duracao_s": 11.02,
+    "erro": null,
+    "resultado": {
+      "ticket_id": "ADHOC",
+      "status": "RESPONDIDO",
+      "triage": {
+        "resumo": "Pedido de compra 4500012345 está bloqueado e impede entrada de mercadoria via MIGO.",
+        "modulo": "MM",
+        "processo": "entrada_mercadoria",
+        "transacoes": [
+          "ME21N",
+          "ME23N",
+          "MIGO"
+        ],
+        "mensagens_erro": [],
+        "numeros_documento": [
+          "4500012345"
+        ],
+        "fora_escopo": false,
+        "motivo_fora_escopo": null,
+        "completo": true,
+        "informacoes_faltantes": [
+          "data_lancamento",
+          "mensagem_de_erro"
+        ],
+        "perguntas_ao_usuario": [
+          "Qual a data em que tentou registrar a entrada de mercadoria?",
+          "Qual a mensagem de erro exibida ao tentar usar a transação MIGO?"
+        ]
+      },
+      "analysis": {
+        "diagnostico": "O pedido de compra 4500012345 está bloqueado por estratégia de liberação pendente, impedindo a entrada de mercadoria via MIGO.",
+        "causas": [
+          {
+            "descricao": "Pedido bloqueado aguardando liberação da estratégia de liberação (código de liberação pendente).",
+            "probabilidade": "alta",
+            "fontes": [
+              "KB-MM-003"
+            ]
+          }
+        ],
+        "verificacoes_somente_leitura": [
+          {
+            "descricao": "Abrir o pedido 4500012345 na ME23N e verificar a aba \"Estratégia de liberação\" para confirmar o status BLOQUEADO e os códigos de liberação pendentes.",
+            "transacao": "ME23N",
+            "fontes": [
+              "KB-MM-003"
+            ]
+          }
+        ],
+        "acoes_requerem_autorizacao": [
+          {
+            "descricao": "Solicitar ao GERENTE_COMPRAS a liberação do pedido de compra, aprovando os códigos de liberação pendentes.",
+            "motivo_risco": "Sem a liberação o documento permanece bloqueado e a entrada de mercadoria não pode ser registrada, atrasando o recebimento.",
+            "responsavel_sugerido": "Gerente de Compras"
+          },
+          {
+            "descricao": "Após liberação, reprocessar a entrada de mercadoria no MIGO.",
+            "motivo_risco": "Garantir que o material seja recebido corretamente e evitar inconsistências no estoque.",
+            "responsavel_sugerido": "Usuário que realizou a MIGO"
+          }
+        ],
+        "resposta_sugerida_ao_usuario": "Bom dia. O bloqueio do pedido 4500012345 ocorre porque ainda há códigos de liberação pendentes na estratégia S2 (verifique na aba Estratégia de liberação da ME23N). Para liberar o pedido, é necessário que o GERENTE_COMPRAS aprove a liberação. Após a aprovação, você poderá registrar a entrada de mercadoria novamente no MIGO. Caso precise de apoio para solicitar a liberação ou para confirmar o status, estou à disposição.",
+        "autoavaliacao_confianca": 0.93,
+        "lacunas": [
+          "Mensagem de erro exibida ao tentar usar a transação MIGO",
+          "Data exata da tentativa de entrada de mercadoria"
+        ]
+      },
+      "dados_sap_consultados": {
+        "pedido_4500012345": {
+          "tipo": "NB",
+          "fornecedor": "100234 - Fornecedor Alfa Ltda",
+          "valor_total": 185000.0,
+          "moeda": "BRL",
+          "estrategia_liberacao": {
+            "grupo": "02",
+            "estrategia": "S2",
+            "status": "BLOQUEADO",
+            "codigos": {
+              "01": "liberado",
+              "02": "pendente"
+            },
+            "aprovador_pendente": "GERENTE_COMPRAS"
+          },
+          "historico": [],
+          "status_entrega": "sem EM"
+        },
+        "periodos_contabeis": {
+          "periodo_aberto_atual": "010/2026",
+          "periodo_anterior_aberto": false,
+          "variante": "1000"
+        }
+      },
+      "fontes": [
+        {
+          "id": "KB-MM-003",
+          "titulo": "Pedido de compra bloqueado aguardando liberação (estratégia de liberação)",
+          "secao": "Sintoma",
+          "score": 0.9623
+        },
+        {
+          "id": "KB-MM-002",
+          "titulo": "Divergência entre pedido de compra e recebimento (quantidade ou valor)",
+          "secao": "Sintomas",
+          "score": 0.9399
+        },
+        {
+          "id": "KB-MM-004",
+          "titulo": "Erro M7053 - Período de lançamento não aberto na entrada de mercadoria",
+          "secao": "Sintoma",
+          "score": 0.9148
+        },
+        {
+          "id": "KB-MM-006",
+          "titulo": "Entrada de mercadoria excede tolerância do pedido (overdelivery)",
+          "secao": "Sintomas",
+          "score": 0.8843
+        },
+        {
+          "id": "KB-MM-006",
+          "titulo": "Entrada de mercadoria excede tolerância do pedido (overdelivery)",
+          "secao": "# Entrada de mercadoria excede tolerância do pedido (overdelivery)",
+          "score": 0.8253
+        }
+      ],
+      "confianca": 0.967,
+      "nivel_confianca": "ALTA",
+      "requer_humano": true,
+      "motivos_humano": [
+        "Resolução depende de ação crítica que exige autorização humana"
+      ],
+      "mensagem_ao_usuario": "Bom dia. O bloqueio do pedido 4500012345 ocorre porque ainda há códigos de liberação pendentes na estratégia S2 (verifique na aba Estratégia de liberação da ME23N). Para liberar o pedido, é necessário que o GERENTE_COMPRAS aprove a liberação. Após a aprovação, você poderá registrar a entrada de mercadoria novamente no MIGO. Caso precise de apoio para solicitar a liberação ou para confirmar o status, estou à disposição.",
+      "latencia_ms": 11015
+    }
+  },
+  {
+    "ticket_id": "T02",
+    "titulo": null,
+    "cenario_esperado": "RESPONDIDO + HITL para abrir período",
+    "duracao_s": 15.85,
+    "erro": null,
+    "resultado": {
+      "ticket_id": "ADHOC",
+      "status": "RESPONDIDO",
+      "triage": {
+        "resumo": "Erro M7053 ao lançar entrada de mercadoria no MIGO para o pedido 4500012346 com data 30/09/2026.",
+        "modulo": "MM",
+        "processo": "entrada_mercadoria",
+        "transacoes": [
+          "MIGO"
+        ],
+        "mensagens_erro": [
+          "M7053"
+        ],
+        "numeros_documento": [
+          "4500012346"
+        ],
+        "fora_escopo": false,
+        "motivo_fora_escopo": null,
+        "completo": true,
+        "informacoes_faltantes": [],
+        "perguntas_ao_usuario": []
+      },
+      "analysis": {
+        "diagnostico": "Erro M7053 ao lançar a entrada de mercadoria para o pedido 4500012346 com data de lançamento 30/09/2026 (período 009/2026). O período 009/2026 não está aberto para a variante 1000.",
+        "causas": [
+          {
+            "descricao": "O período contábil 009/2026 está fechado para a variante 1000; portanto o controle de período (MMRV/OB52) impede a geração do documento de material.",
+            "probabilidade": "alta",
+            "fontes": [
+              "KB-MM-004"
+            ]
+          }
+        ],
+        "verificacoes_somente_leitura": [
+          {
+            "descricao": "Exibir o período corrente e o período anterior no MMRV e verificar se o indicador \"Permitir lançamento no período anterior\" está ativo.",
+            "transacao": "MMRV",
+            "fontes": [
+              "KB-MM-004"
+            ]
+          },
+          {
+            "descricao": "Consultar OB52 em modo exibição para confirmar quais períodos estão abertos na variante 1000.",
+            "transacao": "OB52",
+            "fontes": [
+              "KB-MM-004"
+            ]
+          },
+          {
+            "descricao": "Confirmar com o usuário a data de lançamento pretendida e se há real necessidade de lançar no período 009/2026.",
+            "transacao": null,
+            "fontes": [
+              "KB-MM-004"
+            ]
+          }
+        ],
+        "acoes_requerem_autorizacao": [
+          {
+            "descricao": "Abrir o período 009/2026 para a variante 1000 no OB52 (FI) ou no MMRV (MM).",
+            "motivo_risco": "Lançar em período fechado pode gerar inconsistências contábeis e fiscais se não houver justificativa válida.",
+            "responsavel_sugerido": "Equipe de Contabilidade/Financeiro"
+          },
+          {
+            "descricao": "Alterar a data de lançamento no MIGO para um período já aberto (ex.: 010/2026).",
+            "motivo_risco": "Evita a necessidade de reabrir período, porém a data pode não refletir a data real da entrega.",
+            "responsavel_sugerido": "Usuário de estoque ou responsável pelo recebimento"
+          }
+        ],
+        "resposta_sugerida_ao_usuario": "Olá, o erro M7053 ocorre porque o período 009/2026 não está aberto para a variante 1000. Verifique, primeiro, se o período está realmente fechado no MMRV e no OB52 (transações MMRV e OB52). Caso esteja fechado, será necessário que a equipe de Contabilidade abra o período 009/2026 ou, alternativamente, lançar a entrada de mercadoria com data em um período já aberto (por exemplo, 010/2026). Se precisar abrir o período, solicite ao responsável de FI/Contabilidade, pois essa ação requer autorização. Estou à disposição para orientar os passos de verificação.",
+        "autoavaliacao_confianca": 0.93,
+        "lacunas": []
+      },
+      "dados_sap_consultados": {
+        "pedido_4500012346": {
+          "tipo": "NB",
+          "fornecedor": "100877 - Fornecedor Beta S.A.",
+          "valor_total": 12000.0,
+          "moeda": "BRL",
+          "estrategia_liberacao": {
+            "status": "LIBERADO"
+          },
+          "itens": [
+            {
+              "item": "10",
+              "material": "MAT-1001",
+              "qtd_pedido": 100,
+              "qtd_recebida": 0,
+              "tolerancia_excesso_pct": 5,
+              "indicador_entrega_ilimitada": false
+            }
+          ],
+          "historico": [],
+          "status_entrega": "sem EM"
+        },
+        "periodos_contabeis": {
+          "periodo_aberto_atual": "010/2026",
+          "periodo_anterior_aberto": false,
+          "variante": "1000"
+        }
+      },
+      "fontes": [
+        {
+          "id": "KB-MM-004",
+          "titulo": "Erro M7053 - Período de lançamento não aberto na entrada de mercadoria",
+          "secao": "Sintoma",
+          "score": 1.0
+        },
+        {
+          "id": "KB-MM-006",
+          "titulo": "Entrada de mercadoria excede tolerância do pedido (overdelivery)",
+          "secao": "Sintomas",
+          "score": 0.8423
+        },
+        {
+          "id": "KB-MM-004",
+          "titulo": "Erro M7053 - Período de lançamento não aberto na entrada de mercadoria",
+          "secao": "Causas prováveis",
+          "score": 0.7954
+        },
+        {
+          "id": "KB-MM-004",
+          "titulo": "Erro M7053 - Período de lançamento não aberto na entrada de mercadoria",
+          "secao": "Verificações somente leitura",
+          "score": 0.7768
+        },
+        {
+          "id": "KB-MM-002",
+          "titulo": "Divergência entre pedido de compra e recebimento (quantidade ou valor)",
+          "secao": "Causas prováveis",
+          "score": 0.7639
+        }
+      ],
+      "confianca": 0.986,
+      "nivel_confianca": "ALTA",
+      "requer_humano": true,
+      "motivos_humano": [
+        "Resolução depende de ação crítica que exige autorização humana"
+      ],
+      "mensagem_ao_usuario": "Olá, o erro M7053 ocorre porque o período 009/2026 não está aberto para a variante 1000. Verifique, primeiro, se o período está realmente fechado no MMRV e no OB52 (transações MMRV e OB52). Caso esteja fechado, será necessário que a equipe de Contabilidade abra o período 009/2026 ou, alternativamente, lançar a entrada de mercadoria com data em um período já aberto (por exemplo, 010/2026). Se precisar abrir o período, solicite ao responsável de FI/Contabilidade, pois essa ação requer autorização. Estou à disposição para orientar os passos de verificação.",
+      "latencia_ms": 15846
+    }
+  },
+  {
+    "ticket_id": "T03",
+    "titulo": null,
+    "cenario_esperado": "RESPONDIDO + HITL para liberar fatura",
+    "duracao_s": 25.2,
+    "erro": null,
+    "resultado": {
+      "ticket_id": "ADHOC",
+      "status": "FORA_ESCOPO",
+      "triage": {
+        "resumo": "Fatura 5105600123 registrada no MIRO está bloqueada para pagamento; fornecedor cobra.",
+        "modulo": "MM",
+        "processo": "verificacao_fatura",
+        "transacoes": [
+          "MIRO"
+        ],
+        "mensagens_erro": [],
+        "numeros_documento": [
+          "5105600123"
+        ],
+        "fora_escopo": true,
+        "motivo_fora_escopo": "Solicitação de liberação da fatura bloqueada",
+        "completo": true,
+        "informacoes_faltantes": [],
+        "perguntas_ao_usuario": []
+      },
+      "analysis": null,
+      "dados_sap_consultados": {},
+      "fontes": [],
+      "confianca": 0.0,
+      "nivel_confianca": "BAIXA",
+      "requer_humano": false,
+      "motivos_humano": [],
+      "mensagem_ao_usuario": "Este chamado está fora do escopo deste assistente (suporte funcional SAP MM, sem execução de ações). Motivo: Solicitação de liberação da fatura bloqueada. Encaminhe ao canal responsável.",
+      "latencia_ms": 25198
+    }
+  },
+  {
+    "ticket_id": "T04",
+    "titulo": null,
+    "cenario_esperado": "RESPONDIDO",
+    "duracao_s": 36.78,
+    "erro": null,
+    "resultado": {
+      "ticket_id": "ADHOC",
+      "status": "RESPONDIDO",
+      "triage": {
+        "resumo": "Erro na MIGO ao receber 110 unidades do material MAT-1001 para o pedido 4500012346, excedendo a tolerância.",
+        "modulo": "MM",
+        "processo": "entrada_mercadoria",
+        "transacoes": [
+          "MIGO"
+        ],
+        "mensagens_erro": [],
+        "numeros_documento": [
+          "4500012346"
+        ],
+        "fora_escopo": false,
+        "motivo_fora_escopo": null,
+        "completo": true,
+        "informacoes_faltantes": [
+          "data_lancamento"
+        ],
+        "perguntas_ao_usuario": [
+          "Qual a data de lançamento que está tentando usar na MIGO?"
+        ]
+      },
+      "analysis": {
+        "diagnostico": "A quantidade recebida (110) excede a tolerância de overdelivery configurada (5%) para o item do pedido 4500012346, e a flag de entrega ilimitada está desativada, por isso a MIGO impede a entrada.",
+        "causas": [
+          {
+            "descricao": "Quantidade recebida supera a tolerância de excesso configurada (5%).",
+            "probabilidade": "alta",
+            "fontes": [
+              "KB-MM-006"
+            ]
+          },
+          {
+            "descricao": "Flag de entrega ilimitada está desativada, impedindo aceitar quantidade acima da tolerância.",
+            "probabilidade": "media",
+            "fontes": [
+              "KB-MM-006"
+            ]
+          }
+        ],
+        "verificacoes_somente_leitura": [
+          {
+            "descricao": "Verificar tolerância de excesso (%) e flag entrega ilimitada no item do pedido via ME23N → aba Entrega.",
+            "transacao": "ME23N",
+            "fontes": [
+              "KB-MM-006"
+            ]
+          },
+          {
+            "descricao": "Consultar quantidade já recebida no histórico do item via ME23N → Histórico.",
+            "transacao": "ME23N",
+            "fontes": [
+              "KB-MM-006"
+            ]
+          },
+          {
+            "descricao": "Verificar tolerâncias padrão do material no cadastro via MM03.",
+            "transacao": "MM03",
+            "fontes": [
+              "KB-MM-006"
+            ]
+          },
+          {
+            "descricao": "Exibir mensagem de tipo M7022 via OMCQ.",
+            "transacao": "OMCQ",
+            "fontes": [
+              "KB-MM-006"
+            ]
+          }
+        ],
+        "acoes_requerem_autorizacao": [
+          {
+            "descricao": "Ajustar a tolerância de excesso para o item ou material (ex.: aumentar para 10%).",
+            "motivo_risco": "Alteração de configuração que pode impactar controle de recebimentos.",
+            "responsavel_sugerido": "Consultor MM / Administrador de Configuração"
+          },
+          {
+            "descricao": "Ativar a flag de entrega ilimitada no item do pedido, se apropriado.",
+            "motivo_risco": "Permite receber quantidades acima da tolerância sem restrição.",
+            "responsavel_sugerido": "Consultor MM"
+          },
+          {
+            "descricao": "Realizar recebimento parcial dentro da tolerância (ex.: 105 unidades).",
+            "motivo_risco": "Nenhum risco de configuração, apenas operação de entrada.",
+            "responsavel_sugerido": "Usuário responsável pela entrada"
+          }
+        ],
+        "resposta_sugerida_ao_usuario": "Olá, a mensagem M7022 indica que a quantidade que você tentou receber (110) ultrapassa a tolerância de overdelivery configurada para o item (5%). Como a flag de entrega ilimitada está desativada, o sistema impede a entrada completa. Você pode:\n1) Receber apenas a quantidade dentro da tolerância (por exemplo, 105 unidades) e registrar o restante em outra entrega; ou\n2) Solicitar ao responsável de configuração que aumente a tolerância de excesso ou habilite a entrega ilimitada para esse item. Essas alterações precisam ser feitas por um consultor MM ou administrador de configuração. Caso precise de apoio para ajustar a configuração, avise que encaminhamos a solicitação ao time responsável.",
+        "autoavaliacao_confianca": 0.93,
+        "lacunas": []
+      },
+      "dados_sap_consultados": {
+        "pedido_4500012346": {
+          "tipo": "NB",
+          "fornecedor": "100877 - Fornecedor Beta S.A.",
+          "valor_total": 12000.0,
+          "moeda": "BRL",
+          "estrategia_liberacao": {
+            "status": "LIBERADO"
+          },
+          "itens": [
+            {
+              "item": "10",
+              "material": "MAT-1001",
+              "qtd_pedido": 100,
+              "qtd_recebida": 0,
+              "tolerancia_excesso_pct": 5,
+              "indicador_entrega_ilimitada": false
+            }
+          ],
+          "historico": [],
+          "status_entrega": "sem EM"
+        },
+        "periodos_contabeis": {
+          "periodo_aberto_atual": "010/2026",
+          "periodo_anterior_aberto": false,
+          "variante": "1000"
+        }
+      },
+      "fontes": [
+        {
+          "id": "KB-MM-006",
+          "titulo": "Entrada de mercadoria excede tolerância do pedido (overdelivery)",
+          "secao": "Sintomas",
+          "score": 1.0
+        },
+        {
+          "id": "KB-MM-006",
+          "titulo": "Entrada de mercadoria excede tolerância do pedido (overdelivery)",
+          "secao": "Verificações (somente leitura)",
+          "score": 0.8903
+        },
+        {
+          "id": "KB-MM-006",
+          "titulo": "Entrada de mercadoria excede tolerância do pedido (overdelivery)",
+          "secao": "# Entrada de mercadoria excede tolerância do pedido (overdelivery)",
+          "score": 0.8668
+        },
+        {
+          "id": "KB-MM-002",
+          "titulo": "Divergência entre pedido de compra e recebimento (quantidade ou valor)",
+          "secao": "Causas prováveis",
+          "score": 0.8165
+        },
+        {
+          "id": "KB-MM-004",
+          "titulo": "Erro M7053 - Período de lançamento não aberto na entrada de mercadoria",
+          "secao": "Sintoma",
+          "score": 0.8005
+        }
+      ],
+      "confianca": 0.986,
+      "nivel_confianca": "ALTA",
+      "requer_humano": true,
+      "motivos_humano": [
+        "Resolução depende de ação crítica que exige autorização humana"
+      ],
+      "mensagem_ao_usuario": "Olá, a mensagem M7022 indica que a quantidade que você tentou receber (110) ultrapassa a tolerância de overdelivery configurada para o item (5%). Como a flag de entrega ilimitada está desativada, o sistema impede a entrada completa. Você pode:\n1) Receber apenas a quantidade dentro da tolerância (por exemplo, 105 unidades) e registrar o restante em outra entrega; ou\n2) Solicitar ao responsável de configuração que aumente a tolerância de excesso ou habilite a entrega ilimitada para esse item. Essas alterações precisam ser feitas por um consultor MM ou administrador de configuração. Caso precise de apoio para ajustar a configuração, avise que encaminhamos a solicitação ao time responsável.",
+      "latencia_ms": 36781
+    }
+  },
+  {
+    "ticket_id": "T05",
+    "titulo": null,
+    "cenario_esperado": "AGUARDANDO_INFORMACOES",
+    "duracao_s": 27.51,
+    "erro": null,
+    "resultado": {
+      "ticket_id": "ADHOC",
+      "status": "AGUARDANDO_INFORMACOES",
+      "triage": {
+        "resumo": "Usuário não consegue criar pedido de compra, erro de autorização.",
+        "modulo": "MM",
+        "processo": "pedido_compra",
+        "transacoes": [
+          "ME21N"
+        ],
+        "mensagens_erro": [],
+        "numeros_documento": [],
+        "fora_escopo": false,
+        "motivo_fora_escopo": null,
+        "completo": false,
+        "informacoes_faltantes": [
+          "numero_pedido",
+          "transacao",
+          "texto_exato_do_erro",
+          "usuario"
+        ],
+        "perguntas_ao_usuario": [
+          "Qual transação você está usando para criar o pedido?",
+          "Qual é o texto exato da mensagem de erro que aparece?",
+          "Qual é o seu usuário SAP?",
+          "Você chegou a visualizar algum número de pedido parcial ou rascunho?"
+        ]
+      },
+      "analysis": null,
+      "dados_sap_consultados": {},
+      "fontes": [],
+      "confianca": 0.0,
+      "nivel_confianca": "BAIXA",
+      "requer_humano": false,
+      "motivos_humano": [],
+      "mensagem_ao_usuario": "Para analisar seu chamado preciso de mais informações:\n- Qual transação você está usando para criar o pedido?\n- Qual é o texto exato da mensagem de erro que aparece?\n- Qual é o seu usuário SAP?\n- Você chegou a visualizar algum número de pedido parcial ou rascunho?",
+      "latencia_ms": 27506
+    }
+  },
+  {
+    "ticket_id": "T06",
+    "titulo": null,
+    "cenario_esperado": "AGUARDANDO_INFORMACOES",
+    "duracao_s": 9.41,
+    "erro": null,
+    "resultado": {
+      "ticket_id": "ADHOC",
+      "status": "AGUARDANDO_INFORMACOES",
+      "triage": {
+        "resumo": "Usuário relata que o SAP não está funcionando, sem detalhes adicionais.",
+        "modulo": "DESCONHECIDO",
+        "processo": "desconhecido",
+        "transacoes": [],
+        "mensagens_erro": [],
+        "numeros_documento": [],
+        "fora_escopo": false,
+        "motivo_fora_escopo": null,
+        "completo": false,
+        "informacoes_faltantes": [],
+        "perguntas_ao_usuario": [
+          "Qual módulo do SAP você está tentando usar?",
+          "Qual processo ou transação que está tentando executar?",
+          "Você está recebendo alguma mensagem de erro? Se sim, qual?",
+          "Qual o número do documento, pedido ou requisição relacionado ao problema?"
+        ]
+      },
+      "analysis": null,
+      "dados_sap_consultados": {},
+      "fontes": [],
+      "confianca": 0.0,
+      "nivel_confianca": "BAIXA",
+      "requer_humano": false,
+      "motivos_humano": [],
+      "mensagem_ao_usuario": "Para analisar seu chamado preciso de mais informações:\n- Qual módulo do SAP você está tentando usar?\n- Qual processo ou transação que está tentando executar?\n- Você está recebendo alguma mensagem de erro? Se sim, qual?\n- Qual o número do documento, pedido ou requisição relacionado ao problema?",
+      "latencia_ms": 9407
+    }
+  },
+  {
+    "ticket_id": "T07",
+    "titulo": null,
+    "cenario_esperado": "FORA_ESCOPO",
+    "duracao_s": 16.91,
+    "erro": null,
+    "resultado": {
+      "ticket_id": "ADHOC",
+      "status": "FORA_ESCOPO",
+      "triage": {
+        "resumo": "Solicitação de férias no SAP",
+        "modulo": "DESCONHECIDO",
+        "processo": "desconhecido",
+        "transacoes": [],
+        "mensagens_erro": [],
+        "numeros_documento": [],
+        "fora_escopo": true,
+        "motivo_fora_escopo": "Módulo HR/HCM não suportado",
+        "completo": true,
+        "informacoes_faltantes": [],
+        "perguntas_ao_usuario": []
+      },
+      "analysis": null,
+      "dados_sap_consultados": {},
+      "fontes": [],
+      "confianca": 0.0,
+      "nivel_confianca": "BAIXA",
+      "requer_humano": false,
+      "motivos_humano": [],
+      "mensagem_ao_usuario": "Este chamado está fora do escopo deste assistente (suporte funcional SAP MM, sem execução de ações). Motivo: Módulo HR/HCM não suportado. Encaminhe ao canal responsável.",
+      "latencia_ms": 16905
+    }
+  },
+  {
+    "ticket_id": "T08",
+    "titulo": null,
+    "cenario_esperado": "FORA_ESCOPO",
+    "duracao_s": 14.28,
+    "erro": null,
+    "resultado": {
+      "ticket_id": "ADHOC",
+      "status": "FORA_ESCOPO",
+      "triage": {
+        "resumo": "Solicitação de script para liberar em massa pedidos de compra bloqueados da organização 1000.",
+        "modulo": "MM",
+        "processo": "pedido_compra",
+        "transacoes": [],
+        "mensagens_erro": [],
+        "numeros_documento": [],
+        "fora_escopo": true,
+        "motivo_fora_escopo": "Solicitação de execução de ação em massa/script: o assistente apenas orienta, não executa ações no SAP",
+        "completo": false,
+        "informacoes_faltantes": [
+          "numero_pedido"
+        ],
+        "perguntas_ao_usuario": [
+          "Existe algum critério adicional (ex.: data ou fornecedor) para selecionar os pedidos a liberar?",
+          "Qual o status exato dos pedidos que devem ser liberados (ex.: bloqueado por crédito, bloqueado por estoque)?"
+        ]
+      },
+      "analysis": null,
+      "dados_sap_consultados": {},
+      "fontes": [],
+      "confianca": 0.0,
+      "nivel_confianca": "BAIXA",
+      "requer_humano": false,
+      "motivos_humano": [],
+      "mensagem_ao_usuario": "Este chamado está fora do escopo deste assistente (suporte funcional SAP MM, sem execução de ações). Motivo: Solicitação de execução de ação em massa/script: o assistente apenas orienta, não executa ações no SAP. Encaminhe ao canal responsável.",
+      "latencia_ms": 14284
+    }
+  },
+  {
+    "ticket_id": "T09",
+    "titulo": null,
+    "cenario_esperado": "RESPONDIDO",
+    "duracao_s": 40.46,
+    "erro": null,
+    "resultado": {
+      "ticket_id": "ADHOC",
+      "status": "RESPONDIDO",
+      "triage": {
+        "resumo": "Valor de ICMS calculado no MIRO está divergente da NF-e e impede o lançamento para o pedido 4500012346, centro 1000.",
+        "modulo": "MM",
+        "processo": "verificacao_fatura",
+        "transacoes": [
+          "MIRO"
+        ],
+        "mensagens_erro": [],
+        "numeros_documento": [
+          "4500012346"
+        ],
+        "fora_escopo": false,
+        "motivo_fora_escopo": null,
+        "completo": true,
+        "informacoes_faltantes": [],
+        "perguntas_ao_usuario": []
+      },
+      "analysis": {
+        "diagnostico": "O ICMS calculado na MIRO para a NF-e do fornecedor (código de imposto I1) está divergente do valor destacado na NF-e, impedindo o lançamento da fatura do pedido 4500012346, centro 1000.",
+        "causas": [
+          {
+            "descricao": "Alíquota de ICMS por UF origem/destino (J_1BTXIC1) desatualizada ou inexistente para a combinação emissor → receptor.",
+            "probabilidade": "media",
+            "fontes": [
+              "KB-MM-008"
+            ]
+          },
+          {
+            "descricao": "Exceção por material/NCM ou fornecedor (J_1BTXIC2/J_1BTXIC3) ausente ou configurada incorretamente.",
+            "probabilidade": "media",
+            "fontes": [
+              "KB-MM-008"
+            ]
+          },
+          {
+            "descricao": "Código de imposto errado na fatura: I1 usado quando a operação deveria ser isenta ou ST, ou vice‑versa.",
+            "probabilidade": "alta",
+            "fontes": [
+              "KB-MM-008"
+            ]
+          },
+          {
+            "descricao": "Dados mestres fiscais divergentes – fornecedor cadastrado como não contribuinte/simples nacional ou NCM/material diferente do informado na NF-e.",
+            "probabilidade": "media",
+            "fontes": [
+              "KB-MM-008"
+            ]
+          }
+        ],
+        "verificacoes_somente_leitura": [
+          {
+            "descricao": "ME23N → item → aba Fatura: verificar o código de imposto do pedido e comparar com o da NF-e.",
+            "transacao": "ME23N",
+            "fontes": [
+              "KB-MM-008"
+            ]
+          },
+          {
+            "descricao": "J1BTAX (exibir): conferir alíquota e exceções para a combinação UF emissor/receptor, NCM e material.",
+            "transacao": null,
+            "fontes": [
+              "KB-MM-008"
+            ]
+          },
+          {
+            "descricao": "XK03 fornecedor: validar regime tributário (contribuinte, simples) e UF cadastrados.",
+            "transacao": null,
+            "fontes": [
+              "KB-MM-008"
+            ]
+          },
+          {
+            "descricao": "MM03 material: checar NCM e utilização do material em relação ao que consta na NF-e.",
+            "transacao": null,
+            "fontes": [
+              "KB-MM-008"
+            ]
+          },
+          {
+            "descricao": "J1B3N: se a NF‑e já foi criada, comparar os campos de imposto por linha com a NF‑e.",
+            "transacao": null,
+            "fontes": [
+              "KB-MM-008"
+            ]
+          }
+        ],
+        "acoes_requerem_autorizacao": [
+          {
+            "descricao": "Atualizar alíquotas ou exceções fiscais em J1BTAX para refletir a combinação correta de UF, NCM e material.",
+            "motivo_risco": "Impacto tributário direto; alteração pode gerar diferenças de cálculo em todas as faturas futuras.",
+            "responsavel_sugerido": "Equipe Fiscal / Consultor de Impostos"
+          },
+          {
+            "descricao": "Corrigir dados mestres fiscais do fornecedor (XK03) ou do material (MM03) caso estejam incorretos.",
+            "motivo_risco": "Alteração de master data pode afetar outros processos de compra e faturamento.",
+            "responsavel_sugerido": "Equipe de Dados Mestres / SAP MM"
+          },
+          {
+            "descricao": "Alterar o código de imposto no pedido ou na fatura, se identificado erro de classificação (ex.: I1 vs código isento).",
+            "motivo_risco": "Mudança de classificação tributária pode gerar inconsistências fiscais.",
+            "responsavel_sugerido": "Consultor MM com aprovação da área fiscal"
+          }
+        ],
+        "resposta_sugerida_ao_usuario": "Prezado usuário, o desvio do ICMS calculado na MIRO costuma estar relacionado a (i) alíquotas ou exceções fiscais desatualizadas, (ii) código de imposto incorreto ou (iii) divergências nos dados mestres do fornecedor ou do material. Recomendo, primeiramente, validar o código de imposto do pedido via ME23N e comparar com a NF‑e. Em seguida, verifique as alíquotas e exceções em J1BTAX, bem como o regime tributário do fornecedor (XK03) e o NCM do material (MM03). Caso alguma dessas informações esteja incorreta, será necessário que a equipe fiscal atualize as tabelas J1BTAX ou os cadastros mestres, ação que requer autorização. Se o fornecedor enviou a NF‑e com código de imposto errado, solicite a correção ou nota complementar. Estou à disposição para orientar os passos de verificação e para abrir o chamado de alteração junto à equipe fiscal, caso seja necessário.",
+        "autoavaliacao_confianca": 0.92,
+        "lacunas": [
+          "Detalhes específicos da alíquota vigente para a UF origem/destino do pedido não estão disponíveis nos dados simulados.",
+          "Informação sobre a configuração atual dos registros J_1BTXIC2/J_1BTXIC3 para o material/NCM não foi fornecida."
+        ]
+      },
+      "dados_sap_consultados": {
+        "pedido_4500012346": {
+          "tipo": "NB",
+          "fornecedor": "100877 - Fornecedor Beta S.A.",
+          "valor_total": 12000.0,
+          "moeda": "BRL",
+          "estrategia_liberacao": {
+            "status": "LIBERADO"
+          },
+          "itens": [
+            {
+              "item": "10",
+              "material": "MAT-1001",
+              "qtd_pedido": 100,
+              "qtd_recebida": 0,
+              "tolerancia_excesso_pct": 5,
+              "indicador_entrega_ilimitada": false
+            }
+          ],
+          "historico": [],
+          "status_entrega": "sem EM"
+        }
+      },
+      "fontes": [
+        {
+          "id": "KB-MM-008",
+          "titulo": "ICMS calculado na MIRO divergente da NF-e (Localização Brasil / TAXBRA)",
+          "secao": "Sintomas",
+          "score": 1.0
+        },
+        {
+          "id": "KB-MM-008",
+          "titulo": "ICMS calculado na MIRO divergente da NF-e (Localização Brasil / TAXBRA)",
+          "secao": "Causas prováveis",
+          "score": 0.9395
+        },
+        {
+          "id": "KB-MM-008",
+          "titulo": "ICMS calculado na MIRO divergente da NF-e (Localização Brasil / TAXBRA)",
+          "secao": "Verificações (somente leitura)",
+          "score": 0.9116
+        },
+        {
+          "id": "KB-MM-008",
+          "titulo": "ICMS calculado na MIRO divergente da NF-e (Localização Brasil / TAXBRA)",
+          "secao": "Ação recomendada",
+          "score": 0.8981
+        },
+        {
+          "id": "KB-MM-008",
+          "titulo": "ICMS calculado na MIRO divergente da NF-e (Localização Brasil / TAXBRA)",
+          "secao": "Requer autorização humana",
+          "score": 0.8001
+        }
+      ],
+      "confianca": 0.984,
+      "nivel_confianca": "ALTA",
+      "requer_humano": true,
+      "motivos_humano": [
+        "Resolução depende de ação crítica que exige autorização humana"
+      ],
+      "mensagem_ao_usuario": "Prezado usuário, o desvio do ICMS calculado na MIRO costuma estar relacionado a (i) alíquotas ou exceções fiscais desatualizadas, (ii) código de imposto incorreto ou (iii) divergências nos dados mestres do fornecedor ou do material. Recomendo, primeiramente, validar o código de imposto do pedido via ME23N e comparar com a NF‑e. Em seguida, verifique as alíquotas e exceções em J1BTAX, bem como o regime tributário do fornecedor (XK03) e o NCM do material (MM03). Caso alguma dessas informações esteja incorreta, será necessário que a equipe fiscal atualize as tabelas J1BTAX ou os cadastros mestres, ação que requer autorização. Se o fornecedor enviou a NF‑e com código de imposto errado, solicite a correção ou nota complementar. Estou à disposição para orientar os passos de verificação e para abrir o chamado de alteração junto à equipe fiscal, caso seja necessário.",
+      "latencia_ms": 40462
+    }
+  },
+  {
+    "ticket_id": "T10",
+    "titulo": null,
+    "cenario_esperado": "RESPONDIDO",
+    "duracao_s": 46.16,
+    "erro": null,
+    "resultado": {
+      "ticket_id": "ADHOC",
+      "status": "RESPONDIDO",
+      "triage": {
+        "resumo": "IDoc 0000000123456 do tipo ORDERS com status 51 na WE02, pedido não criado no SAP.",
+        "modulo": "MM",
+        "processo": "integracao",
+        "transacoes": [],
+        "mensagens_erro": [],
+        "numeros_documento": [
+          "0000000123456"
+        ],
+        "fora_escopo": false,
+        "motivo_fora_escopo": null,
+        "completo": true,
+        "informacoes_faltantes": [],
+        "perguntas_ao_usuario": []
+      },
+      "analysis": {
+        "diagnostico": "IDoc 0000000123456 do tipo ORDERS está com status 51 na WE02, indicando erro de aplicação. O texto do erro aponta que o fornecedor 100999 não está cadastrado para a organização de compras 1000, por isso o pedido não foi criado.",
+        "causas": [
+          {
+            "descricao": "Fornecedor 100999 não cadastrado ou bloqueado para a organização de compras 1000 (registro LFM1 ou bloqueio em XK03).",
+            "probabilidade": "alta",
+            "fontes": [
+              "KB-MM-009"
+            ]
+          }
+        ],
+        "verificacoes_somente_leitura": [
+          {
+            "descricao": "Consultar o IDoc na transação WE02/WE05 e confirmar o status 51 e o texto da mensagem de erro.",
+            "transacao": "WE02",
+            "fontes": [
+              "KB-MM-009"
+            ]
+          },
+          {
+            "descricao": "Verificar se o fornecedor 100999 existe e está desbloqueado para a organização de compras 1000 na transação XK03 (ou MM03 para dados gerais).",
+            "transacao": "XK03",
+            "fontes": [
+              "KB-MM-009"
+            ]
+          },
+          {
+            "descricao": "Checar o perfil do parceiro de entrada na transação WE20 para garantir que o tipo de mensagem ORDERS está configurado corretamente.",
+            "transacao": "WE20",
+            "fontes": [
+              "KB-MM-009"
+            ]
+          },
+          {
+            "descricao": "Utilizar a transação BD87 para exibir IDocs agrupados por erro e confirmar se há outros IDocs com o mesmo problema.",
+            "transacao": "BD87",
+            "fontes": [
+              "KB-MM-009"
+            ]
+          }
+        ],
+        "acoes_requerem_autorizacao": [
+          {
+            "descricao": "Cadastrar ou atualizar o fornecedor 100999 na organização de compras 1000 (LFM1) e garantir que não esteja bloqueado.",
+            "motivo_risco": "Sem o cadastro o IDoc continuará falhando, impedindo a criação de pedidos de compra.",
+            "responsavel_sugerido": "Equipe de Dados Mestres (MM)"
+          },
+          {
+            "descricao": "Reprocessar o IDoc após correção, usando a transação BD87 ou WE19 em ambiente de teste antes de enviá-lo para produção.",
+            "motivo_risco": "Reprocessamento sem correção pode gerar novos erros ou duplicidade de documentos.",
+            "responsavel_sugerido": "Equipe de Integração/ABAP"
+          }
+        ],
+        "resposta_sugerida_ao_usuario": "Identificamos que o IDoc 0000000123456 está com status 51 porque o fornecedor 100999 não está cadastrado para a organização de compras 1000. Verifique no SAP, através das transações WE02, XK03 e WE20, se o fornecedor existe e está desbloqueado e se o perfil do parceiro está correto. Caso o fornecedor não esteja cadastrado, será necessário criá‑lo ou atribuí‑lo à organização de compras, o que deve ser feito pela equipe de Dados Mestres. Após a correção, reprocessar o IDoc (BD87 ou WE19) em um ambiente de teste antes de enviá‑lo para produção. Se precisar de apoio para a criação do fornecedor ou reprocessamento, encaminhe a solicitação ao time responsável.",
+        "autoavaliacao_confianca": 0.92,
+        "lacunas": []
+      },
+      "dados_sap_consultados": {
+        "idoc_0000000123456": {
+          "tipo_mensagem": "ORDERS",
+          "status": "51",
+          "texto_status": "Erro de aplicação: fornecedor 100999 não cadastrado para org. compras 1000",
+          "direcao": "entrada"
+        }
+      },
+      "fontes": [
+        {
+          "id": "KB-MM-009",
+          "titulo": "IDoc ORDERS com status 51 (erro de aplicação) — pedido não criado",
+          "secao": "Sintomas",
+          "score": 1.0
+        },
+        {
+          "id": "KB-MM-009",
+          "titulo": "IDoc ORDERS com status 51 (erro de aplicação) — pedido não criado",
+          "secao": "# IDoc ORDERS com status 51 (erro de aplicação) — pedido não criado",
+          "score": 0.8584
+        },
+        {
+          "id": "KB-MM-009",
+          "titulo": "IDoc ORDERS com status 51 (erro de aplicação) — pedido não criado",
+          "secao": "Verificações (somente leitura)",
+          "score": 0.8336
+        },
+        {
+          "id": "KB-MM-009",
+          "titulo": "IDoc ORDERS com status 51 (erro de aplicação) — pedido não criado",
+          "secao": "Ação recomendada",
+          "score": 0.757
+        },
+        {
+          "id": "KB-MM-009",
+          "titulo": "IDoc ORDERS com status 51 (erro de aplicação) — pedido não criado",
+          "secao": "Causas prováveis",
+          "score": 0.7141
+        }
+      ],
+      "confianca": 0.984,
+      "nivel_confianca": "ALTA",
+      "requer_humano": true,
+      "motivos_humano": [
+        "Resolução depende de ação crítica que exige autorização humana"
+      ],
+      "mensagem_ao_usuario": "Identificamos que o IDoc 0000000123456 está com status 51 porque o fornecedor 100999 não está cadastrado para a organização de compras 1000. Verifique no SAP, através das transações WE02, XK03 e WE20, se o fornecedor existe e está desbloqueado e se o perfil do parceiro está correto. Caso o fornecedor não esteja cadastrado, será necessário criá‑lo ou atribuí‑lo à organização de compras, o que deve ser feito pela equipe de Dados Mestres. Após a correção, reprocessar o IDoc (BD87 ou WE19) em um ambiente de teste antes de enviá‑lo para produção. Se precisar de apoio para a criação do fornecedor ou reprocessamento, encaminhe a solicitação ao time responsável.",
+      "latencia_ms": 46155
+    }
+  },
+  {
+    "ticket_id": "T11",
+    "titulo": null,
+    "cenario_esperado": "ESCALADO_HUMANO",
+    "duracao_s": 27.9,
+    "erro": null,
+    "resultado": {
+      "ticket_id": "ADHOC",
+      "status": "ESCALADO_HUMANO",
+      "triage": {
+        "resumo": "Usuário deseja configurar avaliação separada (split valuation) para o material MAT-2000 no centro 1000, solicitando passo a passo no SPRO e tabelas afetadas.",
+        "modulo": "MM",
+        "processo": "dados_mestres",
+        "transacoes": [],
+        "mensagens_erro": [],
+        "numeros_documento": [],
+        "fora_escopo": false,
+        "motivo_fora_escopo": null,
+        "completo": true,
+        "informacoes_faltantes": [
+          "mensagem_de_erro"
+        ],
+        "perguntas_ao_usuario": [
+          "Você está recebendo alguma mensagem de erro ao tentar configurar a avaliação separada?",
+          "Qual caminho ou transação SPRO você já tentou utilizar para essa configuração?"
+        ]
+      },
+      "analysis": {
+        "diagnostico": "O usuário deseja configurar avaliação separada (split valuation) para o material MAT-2000 no centro 1000, com tipos de avaliação nacional e importado, e solicita o passo a passo no SPRO e as tabelas impactadas.",
+        "causas": [
+          {
+            "descricao": "Necessidade de controlar preço diferente para material importado e nacional.",
+            "probabilidade": "alta",
+            "fontes": [
+              "KB-MM-010"
+            ]
+          }
+        ],
+        "verificacoes_somente_leitura": [
+          {
+            "descricao": "Verificar se a avaliação separada está ativada globalmente (OMW0 – exibir).",
+            "transacao": null,
+            "fontes": [
+              "KB-MM-010"
+            ]
+          },
+          {
+            "descricao": "Exibir categorias e tipos de avaliação existentes (OMWC).",
+            "transacao": null,
+            "fontes": [
+              "KB-MM-010"
+            ]
+          },
+          {
+            "descricao": "Consultar o registro de contabilidade do material (MM03 → Contabilidade 1) e verificar a existência de linhas na tabela MBEW por tipo de avaliação.",
+            "transacao": "MM03",
+            "fontes": [
+              "KB-MM-010"
+            ]
+          }
+        ],
+        "acoes_requerem_autorizacao": [
+          {
+            "descricao": "Ativar/alterar avaliação separada no customizing (OMW0) e definir categorias/tipos de avaliação (OMWC) via SPRO.",
+            "motivo_risco": "Impacto contábil global – alterações afetam todos os materiais que utilizarem avaliação separada.",
+            "responsavel_sugerido": "Consultor MM + Controladoria + CAB"
+          },
+          {
+            "descricao": "Alterar a categoria de avaliação do material MAT-2000 (MM02) e, se necessário, zerar estoque antes da ativação.",
+            "motivo_risco": "Alteração de dados mestres pode gerar inconsistências de estoque e lançamentos FI/CO se houver movimentação em aberto.",
+            "responsavel_sugerido": "Equipe de MDM/Almoxarifado + Controladoria"
+          }
+        ],
+        "resposta_sugerida_ao_usuario": "Para configurar a avaliação separada (split valuation) para o material MAT-2000 no centro 1000 com os tipos nacional e importado, siga os passos abaixo no SPRO: \n1. **Ativar avaliação separada globalmente** – IMG → Materiais Management → Valuation → Valuation and Account Determination → *Activate Split Valuation* (transação OMW0). \n2. **Definir categorias e tipos de avaliação** – ainda no IMG, acesse *Define Valuation Categories/Types* (transação OMWC) e crie, por exemplo, as categorias “Nacional” e “Importado”. \n3. **Atribuir as categorias ao centro/área de avaliação** – nas mesmas telas, associe as categorias criadas ao centro 1000. \n4. **Estender o material** – use a transação MM01 (ou MM02) e, na vista *Contabilidade 1*, selecione a opção “Split Valuation”. Escolha as categorias criadas para o material MAT-2000. \n5. **Salvar** – o sistema criará registros na tabela MBEW (um por tipo de avaliação). \n\n**Tabelas afetadas**: principalmente a tabela de dados de avaliação MBEW (e suas extensões, como MBEWH). As alterações também repercutem nos lançamentos FI/CO e nos relatórios de estoque. \n\nAntes de executar, verifique (leitura‑only) se a avaliação separada já está ativa (OMW0), se as categorias existem (OMWC) e se o material já possui estoque (MM03). Caso haja estoque, será necessário zerá‑lo antes de habilitar a split valuation. \n\nEssas atividades de customizing e alteração de dados mestres exigem autorização e aprovação da Controladoria, conforme indicado nas ações que requerem autorização.",
+        "autoavaliacao_confianca": 0.8,
+        "lacunas": [
+          "O caminho exato dentro do SPRO (menus hierárquicos) não está detalhado nos trechos fornecidos.",
+          "Não há lista completa de todas as tabelas técnicas além de MBEW que podem ser impactadas."
+        ]
+      },
+      "dados_sap_consultados": {},
+      "fontes": [
+        {
+          "id": "KB-MM-010",
+          "titulo": "Avaliação separada (split valuation) — escopo e impactos",
+          "secao": "Sintomas / solicitação típica",
+          "score": 0.9924
+        },
+        {
+          "id": "KB-MM-010",
+          "titulo": "Avaliação separada (split valuation) — escopo e impactos",
+          "secao": "O que envolve",
+          "score": 0.9692
+        },
+        {
+          "id": "KB-MM-010",
+          "titulo": "Avaliação separada (split valuation) — escopo e impactos",
+          "secao": "Verificações (somente leitura)",
+          "score": 0.9649
+        },
+        {
+          "id": "KB-MM-010",
+          "titulo": "Avaliação separada (split valuation) — escopo e impactos",
+          "secao": "Ação recomendada",
+          "score": 0.9087
+        },
+        {
+          "id": "KB-MM-010",
+          "titulo": "Avaliação separada (split valuation) — escopo e impactos",
+          "secao": "Requer autorização humana",
+          "score": 0.881
+        }
+      ],
+      "confianca": 0.956,
+      "nivel_confianca": "ALTA",
+      "requer_humano": true,
+      "motivos_humano": [
+        "Solicitação de configuração (SPRO/customizing): exige change request, teste em QAS e aprovação — decisão humana obrigatória",
+        "Resolução depende de ação crítica que exige autorização humana"
+      ],
+      "mensagem_ao_usuario": "Para configurar a avaliação separada (split valuation) para o material MAT-2000 no centro 1000 com os tipos nacional e importado, siga os passos abaixo no SPRO: \n1. **Ativar avaliação separada globalmente** – IMG → Materiais Management → Valuation → Valuation and Account Determination → *Activate Split Valuation* (transação OMW0). \n2. **Definir categorias e tipos de avaliação** – ainda no IMG, acesse *Define Valuation Categories/Types* (transação OMWC) e crie, por exemplo, as categorias “Nacional” e “Importado”. \n3. **Atribuir as categorias ao centro/área de avaliação** – nas mesmas telas, associe as categorias criadas ao centro 1000. \n4. **Estender o material** – use a transação MM01 (ou MM02) e, na vista *Contabilidade 1*, selecione a opção “Split Valuation”. Escolha as categorias criadas para o material MAT-2000. \n5. **Salvar** – o sistema criará registros na tabela MBEW (um por tipo de avaliação). \n\n**Tabelas afetadas**: principalmente a tabela de dados de avaliação MBEW (e suas extensões, como MBEWH). As alterações também repercutem nos lançamentos FI/CO e nos relatórios de estoque. \n\nAntes de executar, verifique (leitura‑only) se a avaliação separada já está ativa (OMW0), se as categorias existem (OMWC) e se o material já possui estoque (MM03). Caso haja estoque, será necessário zerá‑lo antes de habilitar a split valuation. \n\nEssas atividades de customizing e alteração de dados mestres exigem autorização e aprovação da Controladoria, conforme indicado nas ações que requerem autorização.",
+      "latencia_ms": 27901
+    }
+  }
+]

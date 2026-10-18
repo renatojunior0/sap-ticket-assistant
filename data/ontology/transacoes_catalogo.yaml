@@ -1,0 +1,2177 @@
+AB02:
+  categoria: Imobilizado (AA/AM)
+  descricao: Modificar documento de imobilizado
+  modulo: FI
+AB03:
+  categoria: Imobilizado (AA/AM)
+  descricao: Exibir documento do imobilizado
+  modulo: FI
+AB08:
+  categoria: Imobilizado (AA/AM)
+  descricao: Estornar part.indiv.do imobilizado
+  modulo: FI
+ABAON:
+  categoria: Imobilizado (AA/AM)
+  descricao: Baixa imob.por venda sem cliente
+  modulo: FI
+ABAVN:
+  categoria: Imobilizado (AA/AM)
+  descricao: Baixa por sucata
+  modulo: FI
+ABT1N:
+  categoria: Imobilizado (AA/AM)
+  descricao: Imobilizados Transferência
+  modulo: FI
+AIBU:
+  categoria: Imobilizado (AA/AM)
+  descricao: Transferir imobilizado em andamento
+  modulo: FI
+AIST:
+  categoria: Imobilizado (AA/AM)
+  descricao: Estornar liquidação imobil.em andam.
+  modulo: FI
+AR01:
+  categoria: Imobilizado (AA/AM)
+  descricao: Chamar lista do ativo imobilizado
+  modulo: FI
+AR02:
+  categoria: Imobilizado (AA/AM)
+  descricao: Chamar quadro do imobilizado
+  modulo: FI
+AR05:
+  categoria: Imobilizado (AA/AM)
+  descricao: Chamar lista de aquisição do imob.
+  modulo: FI
+AR06:
+  categoria: Imobilizado (AA/AM)
+  descricao: Chamar lista de baixa do imob.
+  modulo: FI
+AR07:
+  categoria: Imobilizado (AA/AM)
+  descricao: Chamar lista de transf.do imob.
+  modulo: FI
+AR12:
+  categoria: Imobilizado (AA/AM)
+  descricao: Chamar lista do imobilizado
+  modulo: FI
+AR16:
+  categoria: Imobilizado (AA/AM)
+  descricao: Modificações nas classes do imob.
+  modulo: FI
+AR18:
+  categoria: Imobilizado (AA/AM)
+  descricao: Chamar simulação de depreciação
+  modulo: FI
+AR27:
+  categoria: Imobilizado (AA/AM)
+  descricao: Chamar lista de complexos de imob.
+  modulo: FI
+AS01:
+  categoria: Imobilizado (AA/AM)
+  descricao: Criar registro mestre do imobilizado
+  modulo: FI
+AS02:
+  categoria: Imobilizado (AA/AM)
+  descricao: Modificar registro mestre do imob.
+  modulo: FI
+AS03:
+  categoria: Imobilizado (AA/AM)
+  descricao: Exibir registro mestre do imob.
+  modulo: FI
+AS05:
+  categoria: Imobilizado (AA/AM)
+  descricao: Bloquear registro mestre do imob.
+  modulo: FI
+AS06:
+  categoria: Imobilizado (AA/AM)
+  descricao: Elimin.regis.mestre imob./Marc.elim.
+  modulo: FI
+AS11:
+  categoria: Imobilizado (AA/AM)
+  descricao: Criar subnº imobilizado
+  modulo: FI
+AS21:
+  categoria: Imobilizado (AA/AM)
+  descricao: Criar complexo de imobilizados
+  modulo: FI
+AS22:
+  categoria: Imobilizado (AA/AM)
+  descricao: Modificar complexo de imobilizados
+  modulo: FI
+AS24:
+  categoria: Imobilizado (AA/AM)
+  descricao: Criar subnº complexo de imobilizados
+  modulo: FI
+ASKB:
+  categoria: Imobilizado (AA/AM)
+  descricao: Lançamentos periódicos de imob.
+  modulo: FI
+CA01:
+  categoria: Roteiro
+  descricao: Criar roteiro (Produção Discreta)
+  modulo: PP
+CA02:
+  categoria: Roteiro
+  descricao: Modificar Roteiro (Produção Discreta)
+  modulo: PP
+CA03:
+  categoria: Roteiro
+  descricao: Exibir Roteiro (Produção Discreta)
+  modulo: PP
+CA21:
+  categoria: Roteiro
+  descricao: Criar Roteiro (Produção Repetitiva)
+  modulo: PP
+CA22:
+  categoria: Roteiro
+  descricao: Modificar Roteiro (Produção Repetitiva)
+  modulo: PP
+CA23:
+  categoria: Roteiro
+  descricao: Exibir Roteiro (Produção Repetitiva)
+  modulo: PP
+CK11N:
+  categoria: Roteiro
+  descricao: Criar Cálculo de Custos Material
+  modulo: PP
+CK13:
+  categoria: null
+  descricao: Exibir Cálculo de Custos Individuais
+  modulo: CO
+CK22:
+  categoria: null
+  descricao: Permitir Marcação
+  modulo: CO
+CK23:
+  categoria: null
+  descricao: Permitir Liberação
+  modulo: CO
+CK41:
+  categoria: null
+  descricao: Criar Execução de Custeio de Produtos
+  modulo: CO
+CK42:
+  categoria: null
+  descricao: Modificar Execução de Custeio de Produtos
+  modulo: CO
+CK43:
+  categoria: null
+  descricao: Exibir Execução de Custeio de Produtos
+  modulo: CO
+CK60:
+  categoria: null
+  descricao: Seleção de Centro Online
+  modulo: CO
+CK62:
+  categoria: null
+  descricao: Explosão de Lista de Materiais
+  modulo: CO
+CK64:
+  categoria: null
+  descricao: Executar Cálculo de Custo
+  modulo: CO
+CK66:
+  categoria: null
+  descricao: Marcar Cálculo de Custo
+  modulo: CO
+CK68:
+  categoria: null
+  descricao: Liberar Cálculo de Custo
+  modulo: CO
+CK71:
+  categoria: null
+  descricao: Criar Cálculo de Custos Manuais
+  modulo: CO
+CK72:
+  categoria: null
+  descricao: Modificar Cálculo de Custos Manuais
+  modulo: CO
+CK73:
+  categoria: null
+  descricao: Exibir Cálculo de Custos Manuais
+  modulo: CO
+CKM3:
+  categoria: Controle de Produção
+  descricao: Razão do Material
+  modulo: PP
+CKU1:
+  categoria: null
+  descricao: Atualizar Custo de Reposição
+  modulo: CO
+CKVF:
+  categoria: null
+  descricao: Exibir Autorização
+  modulo: CO
+CL02:
+  categoria: Sistema de Classificação
+  descricao: Consulta de Classes
+  modulo: PM
+CL06A:
+  categoria: Sistema de Classificação
+  descricao: Relatório de Classes
+  modulo: PM
+CM01:
+  categoria: Planejamento de Capacidade
+  descricao: Carga de Capacidade
+  modulo: PP
+CM02:
+  categoria: Planejamento de Capacidade
+  descricao: Ordens
+  modulo: PP
+CM03:
+  categoria: Planejamento de Capacidade
+  descricao: Pool
+  modulo: PP
+CM04:
+  categoria: Planejamento de Capacidade
+  descricao: Atrasos
+  modulo: PP
+CM05:
+  categoria: Planejamento de Capacidade
+  descricao: Sobrecarga
+  modulo: PP
+CM21:
+  categoria: Planejamento de Capacidade
+  descricao: Painel Plan. Gráfico
+  modulo: PP
+CO01:
+  categoria: Controle de Produção
+  descricao: Criar Ordem
+  modulo: PP
+CO02:
+  categoria: Controle de Produção
+  descricao: Modificar Ordem
+  modulo: PP
+CO03:
+  categoria: Controle de Produção
+  descricao: Exibir Ordem
+  modulo: PP
+CO11N:
+  categoria: Controle de Produção
+  descricao: Confirmação Registrar para Operação - Folha de Trabalho
+  modulo: PP
+CO13:
+  categoria: Controle de Produção
+  descricao: Estornar Apontamento
+  modulo: PP
+CO15:
+  categoria: Controle de Produção
+  descricao: Confirmação Registrar para Ordem
+  modulo: PP
+CO40:
+  categoria: Planejamento de Necessidades (MRP)
+  descricao: Conversão Individual Ord. Produção
+  modulo: PP
+CO41:
+  categoria: Planejamento de Necessidades (MRP)
+  descricao: Conversão Coletiva Ord. Produção
+  modulo: PP
+CO43:
+  categoria: null
+  descricao: Liquidação de Ordens – Coletivo
+  modulo: CO
+CO88:
+  categoria: null
+  descricao: Apropriação de Custos Reais – Coletivo
+  modulo: CO
+COID:
+  categoria: Controle de Produção
+  descricao: Sistema de Informação para Ordens (Processo)
+  modulo: PP
+COOIS:
+  categoria: Controle de Produção
+  descricao: Sistema de Informação para Ordens (Discreta)
+  modulo: PP
+CR01:
+  categoria: Centro de Trabalho
+  descricao: Criar centro de trabalho
+  modulo: PP
+CR02:
+  categoria: Centro de Trabalho
+  descricao: Modificar Centro de Trabalho
+  modulo: PP
+CR03:
+  categoria: Centro de Trabalho
+  descricao: Exibir Centro de Trabalho
+  modulo: PP
+CR05:
+  categoria: Centro de Trabalho PM
+  descricao: Relatório de Centros de Trabalho de Manutenção
+  modulo: PM
+CR11:
+  categoria: Centro de Trabalho
+  descricao: Capacidade do centro de trabalho
+  modulo: PP
+CS01:
+  categoria: Lista Técnica
+  descricao: Criar Lista Técnica de Material
+  modulo: PP
+CS02:
+  categoria: Lista Técnica
+  descricao: Modificar Lista Técnica de Material
+  modulo: PP
+CS03:
+  categoria: Lista Técnica
+  descricao: Exibir Lista Técnica de Material
+  modulo: PP
+CS11:
+  categoria: Lista Técnica
+  descricao: Lista Montagem Multi-Nível
+  modulo: PP
+CS12:
+  categoria: Lista Técnica
+  descricao: Estrutura Multi-Nível
+  modulo: PP
+CS13:
+  categoria: Lista Técnica
+  descricao: Lista técnica multi-nivel (síntese de quantidade)
+  modulo: PP
+CS15:
+  categoria: Lista Técnica
+  descricao: Verifica em quais listas técnicas está o material
+  modulo: PP
+CT04:
+  categoria: Sistema de Classificação
+  descricao: Consulta de Características
+  modulo: PM
+CT10:
+  categoria: Sistema de Classificação
+  descricao: Relatório de Características
+  modulo: PM
+CT11:
+  categoria: Sistema de Classificação
+  descricao: Relatório Índice de Valor Características
+  modulo: PM
+F01:
+  categoria: Contabilidade (GL)
+  descricao: Criar documento modelo
+  modulo: FI
+F110:
+  categoria: Contas a Receber (AR)
+  descricao: Programa de recebimento automático
+  modulo: FI
+FB02:
+  categoria: Contas a Receber (AR)
+  descricao: Mudança documento cliente
+  modulo: FI
+FB03:
+  categoria: Contas a Receber (AR)
+  descricao: Exibir documento de cliente
+  modulo: FI
+FB04:
+  categoria: Contas a Receber (AR)
+  descricao: Exibir as modificações em cliente
+  modulo: FI
+FB08:
+  categoria: Contas a Pagar (AP)
+  descricao: Estornar documento ( documento em aberto )
+  modulo: FI
+FB09:
+  categoria: Contas a Pagar (AP)
+  descricao: Modificar documento
+  modulo: FI
+FB50:
+  categoria: Contabilidade (GL)
+  descricao: Criar lançamento de contas do razão - GL document ( tela nova )
+  modulo: FI
+FB60:
+  categoria: Contas a Pagar (AP)
+  descricao: Lançar fatura de fornecedor - nova
+  modulo: FI
+FB70:
+  categoria: Contas a Receber (AR)
+  descricao: Lançar fatura de cliente - nova
+  modulo: FI
+FB80:
+  categoria: Contas a Pagar (AP)
+  descricao: Estorno de documento em massa
+  modulo: FI
+FBD1:
+  categoria: Contas a Pagar (AP)
+  descricao: Criar lançamentos periódicos
+  modulo: FI
+FBD2:
+  categoria: Contabilidade (GL)
+  descricao: Modificar documento periódico
+  modulo: FI
+FBL1N:
+  categoria: Contas a Pagar (AP)
+  descricao: Consultar partida de fornecedor / modificar / bloquear e desbloquear
+  modulo: FI
+FBL3N:
+  categoria: Contabilidade (GL)
+  descricao: Exibir partida individual em contas do razão
+  modulo: FI
+FBL4N:
+  categoria: Contabilidade (GL)
+  descricao: Modificar partida individual em conta do razão
+  modulo: FI
+FBL5N:
+  categoria: Contas a Receber (AR)
+  descricao: Consultar partida de cliente / modificar / bloquear e desbloquear
+  modulo: FI
+FBN1:
+  categoria: Contabilidade (GL)
+  descricao: Criar intervalo de numeração
+  modulo: FI
+FBRA:
+  categoria: Contas a Receber (AR)
+  descricao: Anular Compensação ( documento compensado )
+  modulo: FI
+FBS1:
+  categoria: Contabilidade (GL)
+  descricao: Criar lançamento periódico p/ provisão( com estorno período seguinte
+    )
+  modulo: FI
+FBV:
+  categoria: Contas a Pagar (AP)
+  descricao: Eliminar documentos pré editados
+  modulo: FI
+FCH1:
+  categoria: Contas a Pagar (AP)
+  descricao: Consultar invalidação cheque
+  modulo: FI
+FCH2:
+  categoria: Contas a Pagar (AP)
+  descricao: Consultar cheque por documento de pagamento
+  modulo: FI
+FCH3:
+  categoria: Contas a Pagar (AP)
+  descricao: Invalidar cheques não utilizados
+  modulo: FI
+FCH7:
+  categoria: Contas a Pagar (AP)
+  descricao: Cancelar cheque e reimprimir
+  modulo: FI
+FCH8:
+  categoria: Contas a Pagar (AP)
+  descricao: Cancelar cheque com estorno do documento de pagamento
+  modulo: FI
+FCH9:
+  categoria: Contas a Pagar (AP)
+  descricao: Cancelar cheque emitido
+  modulo: FI
+FCHI:
+  categoria: Contas a Pagar (AP)
+  descricao: Cadastrar cheques
+  modulo: FI
+FCHN:
+  categoria: Contas a Pagar (AP)
+  descricao: Consultar lista de cheque
+  modulo: FI
+FD01:
+  categoria: Contas a Receber (AR)
+  descricao: Criar cliente
+  modulo: FI
+FD02:
+  categoria: Contas a Receber (AR)
+  descricao: Modificar cliente
+  modulo: FI
+FD03:
+  categoria: Contas a Receber (AR)
+  descricao: Exibir cliente
+  modulo: FI
+FD04:
+  categoria: Contas a Receber (AR)
+  descricao: Exibir modificações
+  modulo: FI
+FD05:
+  categoria: Contas a Receber (AR)
+  descricao: Bloquear / desbloquear cliente
+  modulo: FI
+FD06:
+  categoria: Contas a Receber (AR)
+  descricao: Marcar cliente para deleção
+  modulo: FI
+FD10N:
+  categoria: Contas a Receber (AR)
+  descricao: Exibir saldo das contas
+  modulo: FI
+FD24:
+  categoria: Contas a Receber (AR)
+  descricao: Exibir as mudanças de clientes
+  modulo: FI
+FD32:
+  categoria: Contas a Receber (AR)
+  descricao: Mudança individual de cliente
+  modulo: FI
+FFBS1:
+  categoria: Contabilidade (GL)
+  descricao: Avaliação de partidas em aberto em moeda estrangeira(encerramento)
+  modulo: FI
+FK01:
+  categoria: Fornecedores
+  descricao: Cria fornecedor - Dados gerais e financeiros
+  modulo: MM
+FK02:
+  categoria: Fornecedores
+  descricao: Modifica fornecedor - Dados gerais e financeiros
+  modulo: MM
+FK03:
+  categoria: Fornecedores
+  descricao: Consulta fornecedor - Dados gerais e financeiros
+  modulo: MM
+FK06:
+  categoria: Contas a Pagar (AP)
+  descricao: Marcação p/elimin.-forneced.(contab)
+  modulo: FI
+FK10N:
+  categoria: Contas a Pagar (AP)
+  descricao: Consultar saldo de fornecedor
+  modulo: FI
+FKMT:
+  categoria: Contas a Receber (AR)
+  descricao: Modelo de classificação contábil
+  modulo: FI
+FS00:
+  categoria: Contabilidade (GL)
+  descricao: Criar contas centralmente no plano de contas e na empresa
+  modulo: FI
+FS01:
+  categoria: Contabilidade (GL)
+  descricao: Criar contas do razão
+  modulo: FI
+FS02:
+  categoria: Contabilidade (GL)
+  descricao: Modificar contas do razão
+  modulo: FI
+FS03:
+  categoria: Contabilidade (GL)
+  descricao: Exibir contas do razão
+  modulo: FI
+FS04:
+  categoria: Contabilidade (GL)
+  descricao: Exibir modificações das contas do razão
+  modulo: FI
+FS05:
+  categoria: Contabilidade (GL)
+  descricao: Bloquear / Desbloquear contas do razão
+  modulo: FI
+FS06:
+  categoria: Contabilidade (GL)
+  descricao: Marcar para eliminação contas do razão
+  modulo: FI
+FS10N:
+  categoria: Contabilidade (GL)
+  descricao: Exibir saldo das contas
+  modulo: FI
+FSM1:
+  categoria: Contabilidade (GL)
+  descricao: Criar conta modelo
+  modulo: FI
+FSP0:
+  categoria: Contabilidade (GL)
+  descricao: Criar conta contábil no plano de contas
+  modulo: FI
+FST2:
+  categoria: Contabilidade (GL)
+  descricao: Atualizar denominação de contas do razão no plano de contas
+  modulo: FI
+FTXP:
+  categoria: Contabilidade (GL)
+  descricao: Definir códigos de impostos (IVA)
+  modulo: FI
+GGBO:
+  categoria: null
+  descricao: verificar regras de validação
+  modulo: BC
+IA01:
+  categoria: Lista de Tarefas de Manutenção
+  descricao: Criar Lista de Tarefas de Equipamento
+  modulo: PM
+IA02:
+  categoria: Lista de Tarefas de Manutenção
+  descricao: Modificar Lista de Tarefas de Equipamento
+  modulo: PM
+IA03:
+  categoria: Lista de Tarefas de Manutenção
+  descricao: Consulta de Lista de Tarefa de Equipamento
+  modulo: PM
+IA05:
+  categoria: Lista de Tarefas de Manutenção
+  descricao: Criar Lista de Tarefa de Instrução Geral
+  modulo: PM
+IA06:
+  categoria: Lista de Tarefas de Manutenção
+  descricao: Modificar Lista de Tarefa de Instrução Geral
+  modulo: PM
+IA07:
+  categoria: Lista de Tarefas de Manutenção
+  descricao: Consulta de Lista de Tarefa de Instrução Geral
+  modulo: PM
+IA09:
+  categoria: Lista de Tarefas de Manutenção
+  descricao: Relatório de Lista de Tarefa de Instrução Geral
+  modulo: PM
+IA11:
+  categoria: Lista de Tarefas de Manutenção
+  descricao: Criar Lista de Tarefas de Local de Instalação
+  modulo: PM
+IA12:
+  categoria: Lista de Tarefas de Manutenção
+  descricao: Modificar Lista de Tarefas de Local de Instalação
+  modulo: PM
+IA13:
+  categoria: Lista de Tarefas de Manutenção
+  descricao: Consulta de Lista de Tarefas de Local de Instalação
+  modulo: PM
+IB01:
+  categoria: Lista Técnica de Manutenção
+  descricao: Criar Lista Técnica de Equipamentos
+  modulo: PM
+IB02:
+  categoria: Lista Técnica de Manutenção
+  descricao: Modificar Lista Técnica de Equipamentos
+  modulo: PM
+IB03:
+  categoria: Lista Técnica de Manutenção
+  descricao: Consulta de Lista Técnica de Equipamento
+  modulo: PM
+IB11:
+  categoria: Lista Técnica de Manutenção
+  descricao: Criar Lista Técnica de Local de Instalação
+  modulo: PM
+IB12:
+  categoria: Lista Técnica de Manutenção
+  descricao: Modificar Lista Técnica de Local de Instalação
+  modulo: PM
+IB13:
+  categoria: Lista Técnica de Manutenção
+  descricao: Consulta de Lista Técnica de Local de Instalação
+  modulo: PM
+IE01:
+  categoria: Equipamento
+  descricao: Criar Equipamento
+  modulo: PM
+IE02:
+  categoria: Equipamento
+  descricao: Modificar Equipamento
+  modulo: PM
+IE03:
+  categoria: Equipamento
+  descricao: Consulta de Equipamento
+  modulo: PM
+IH01:
+  categoria: Local de Instalação
+  descricao: Representação Estrutural do Local de Instalação
+  modulo: PM
+IH03:
+  categoria: Equipamento
+  descricao: Representação Estrutural Equipamentos
+  modulo: PM
+IH04:
+  categoria: Lista Técnica de Manutenção
+  descricao: Representação Estrutural Listas Técnicas de Equipamento
+  modulo: PM
+IH06:
+  categoria: Local de Instalação
+  descricao: Relatório de Locais de Instalação
+  modulo: PM
+IH08:
+  categoria: Equipamento
+  descricao: Relatório de Equipamentos
+  modulo: PM
+IH12:
+  categoria: Lista Técnica de Manutenção
+  descricao: Representação Estrutural Listas Técnicas de Local de Instalação
+  modulo: PM
+IK01:
+  categoria: Pontos de Medição
+  descricao: Criar Ponto de Medição
+  modulo: PM
+IK02:
+  categoria: Pontos de Medição
+  descricao: Modificar Ponto de Medição
+  modulo: PM
+IK03:
+  categoria: Pontos de Medição
+  descricao: Consulta de Ponto de Medição
+  modulo: PM
+IK07:
+  categoria: Pontos de Medição
+  descricao: Relatório de Pontos de Medição
+  modulo: PM
+IK11:
+  categoria: Pontos de Medição
+  descricao: Criar Documento de Medição
+  modulo: PM
+IK12:
+  categoria: Pontos de Medição
+  descricao: Modificar Documento de Medição
+  modulo: PM
+IK13:
+  categoria: Pontos de Medição
+  descricao: Consulta de Documento de Medição
+  modulo: PM
+IK17:
+  categoria: Pontos de Medição
+  descricao: Relatório de Documentos de Medição
+  modulo: PM
+IL01:
+  categoria: Local de Instalação
+  descricao: Criar Local de Instalação
+  modulo: PM
+IL02:
+  categoria: Local de Instalação
+  descricao: Modificar Local de Instalação
+  modulo: PM
+IL03:
+  categoria: Local de Instalação
+  descricao: Consulta de Local de Instalação
+  modulo: PM
+IP02:
+  categoria: Plano de Manutenção
+  descricao: Modificar Plano de Manutenção
+  modulo: PM
+IP03:
+  categoria: Plano de Manutenção
+  descricao: Consulta de Planos de Manutenção
+  modulo: PM
+IP10:
+  categoria: Plano de Manutenção
+  descricao: Programar Plano de Manutenção
+  modulo: PM
+IP11:
+  categoria: Estratégia de Manutenção
+  descricao: Modificar Estratégia de Manutenção
+  modulo: PM
+IP12:
+  categoria: Estratégia de Manutenção
+  descricao: Consulta de Estratégia de Manutenção
+  modulo: PM
+IP14:
+  categoria: Estratégia de Manutenção
+  descricao: Relatório de Utilização da Estratégia de Manutenção
+  modulo: PM
+IP16:
+  categoria: Plano de Manutenção
+  descricao: Relatório de Planos de Manutenção
+  modulo: PM
+IP24:
+  categoria: Plano de Manutenção
+  descricao: Relatório de Síntese de Datas por Planos de Manutenção
+  modulo: PM
+IP30:
+  categoria: Plano de Manutenção
+  descricao: Monitorar Plano de Manutenção
+  modulo: PM
+IP31:
+  categoria: Plano de Manutenção
+  descricao: Relatório de Custos por Planos de Manutenção
+  modulo: PM
+IP41:
+  categoria: Plano de Manutenção
+  descricao: Criar Plano de Manutenção - Ciclo individual
+  modulo: PM
+IP42:
+  categoria: Plano de Manutenção
+  descricao: Criar Plano de Manutenção - Estratégia
+  modulo: PM
+IP43:
+  categoria: Plano de Manutenção
+  descricao: Criar Plano de Manutenção - Multipla
+  modulo: PM
+IR01:
+  categoria: Centro de Trabalho PM
+  descricao: Criar Centros de Trabalho de Manutenção
+  modulo: PM
+IR02:
+  categoria: Centro de Trabalho PM
+  descricao: Modificar Centros de Trabalho de Manutenção
+  modulo: PM
+IR03:
+  categoria: Centro de Trabalho PM
+  descricao: Consulta de Centro de Trabalho de Manutenção
+  modulo: PM
+IW21:
+  categoria: Notas PM
+  descricao: Criar Nota PM
+  modulo: PM
+IW22:
+  categoria: Notas PM
+  descricao: Modificar Nota PM
+  modulo: PM
+IW23:
+  categoria: Notas PM
+  descricao: Consulta de Notas PM
+  modulo: PM
+IW29:
+  categoria: Notas PM
+  descricao: Relatório de Processamento de Listas de Notas
+  modulo: PM
+IW31:
+  categoria: Ordem de Serviço de Manutenção
+  descricao: Criar Ordem de Serviço de Manutenção
+  modulo: PM
+IW32:
+  categoria: Ordem de Serviço de Manutenção
+  descricao: Modificar Ordem de Serviço de Manutenção
+  modulo: PM
+IW33:
+  categoria: Ordem de Serviço de Manutenção
+  descricao: Consulta de Ordens de Serviço de Manutenção
+  modulo: PM
+IW39:
+  categoria: Ordem de Serviço de Manutenção
+  descricao: Relatório de Ordens de Serviço de Manutenção
+  modulo: PM
+IW69:
+  categoria: Notas PM
+  descricao: Relatório de Lista de Itens da Nota
+  modulo: PM
+J1B1N:
+  categoria: Entrada Fiscal
+  descricao: Cria nota fiscal writer
+  modulo: MM
+J1B2N:
+  categoria: Entrada Fiscal
+  descricao: Modifica nota fiscal
+  modulo: MM
+J1B3N:
+  categoria: Entrada Fiscal
+  descricao: Consulta, cancela e imprime nota fiscal
+  modulo: MM
+KA01:
+  categoria: null
+  descricao: Criar Elemento de Custo Primário
+  modulo: CO
+KA02:
+  categoria: Contabilidade (GL)
+  descricao: Processar Classe de Custo
+  modulo: FI
+KA03:
+  categoria: null
+  descricao: Exibir Elemento de Custo
+  modulo: CO
+KA04:
+  categoria: null
+  descricao: Eliminar Elemento de Custo
+  modulo: CO
+KA05:
+  categoria: null
+  descricao: Exibir Mudanças nos Elemento de Custo
+  modulo: CO
+KA06:
+  categoria: null
+  descricao: Criar Elemento de Custo Secundário
+  modulo: CO
+KAH1:
+  categoria: null
+  descricao: Criar Grupos de Elementos de Custo
+  modulo: CO
+KAH2:
+  categoria: null
+  descricao: Modificar Grupos de Elementos de Custo
+  modulo: CO
+KAH3:
+  categoria: null
+  descricao: Exibir Grupos de Elementos de Custo
+  modulo: CO
+KB11N:
+  categoria: null
+  descricao: Entrar com Transferencia de Custos
+  modulo: CO
+KB13:
+  categoria: null
+  descricao: Exibir Transferencia de Custos
+  modulo: CO
+KB14:
+  categoria: null
+  descricao: Estornar Transferencia de Custos
+  modulo: CO
+KB61:
+  categoria: null
+  descricao: Entrar Transferência de Partidas Individuais
+  modulo: CO
+KB63:
+  categoria: null
+  descricao: Exibir Transferência de Partidas Individuais
+  modulo: CO
+KB64:
+  categoria: null
+  descricao: Estornar Transferência de Partidas Individuais
+  modulo: CO
+KBH1:
+  categoria: null
+  descricao: Criar Grupo Chave Estatística
+  modulo: CO
+KBH2:
+  categoria: null
+  descricao: Modificar Grupos de Chaves Estatísticas
+  modulo: CO
+KBH3:
+  categoria: null
+  descricao: Exibir Grupos de Chaves Estatísticas
+  modulo: CO
+KCH1:
+  categoria: null
+  descricao: Criar Grupo de Centro de Lucro
+  modulo: CO
+KCH2:
+  categoria: null
+  descricao: Modificar Grupo de Centro de Lucro
+  modulo: CO
+KCH3:
+  categoria: null
+  descricao: Exibir Grupo de Centro de Lucro
+  modulo: CO
+KE51:
+  categoria: null
+  descricao: Criar Centro de Lucro
+  modulo: CO
+KE52:
+  categoria: null
+  descricao: Modificar Centro de Lucro
+  modulo: CO
+KGI2:
+  categoria: null
+  descricao: Liquidação de Ordens – Individual
+  modulo: CO
+KK01:
+  categoria: null
+  descricao: Criar Chave Estatística de Rateio
+  modulo: CO
+KK02:
+  categoria: null
+  descricao: Modificar Chave Estatística de Rateio
+  modulo: CO
+KK03:
+  categoria: null
+  descricao: Exibir Chave Estatística de Rateio
+  modulo: CO
+KKAO:
+  categoria: null
+  descricao: Determinar Materiais em Processo – Coletivo
+  modulo: CO
+KKAQ:
+  categoria: null
+  descricao: Exibir Materiais em Processo – Coletivo
+  modulo: CO
+KKAX:
+  categoria: null
+  descricao: Determinar Materiais em Processo – Individual
+  modulo: CO
+KKAY:
+  categoria: null
+  descricao: Exibir Materiais em Processo – Individual
+  modulo: CO
+KKF6N:
+  categoria: null
+  descricao: Criar coletor de custos para material
+  modulo: CO
+KL01:
+  categoria: null
+  descricao: Criar Tipos de Atividade
+  modulo: CO
+KL02:
+  categoria: null
+  descricao: Modificar Tipos de Atividade
+  modulo: CO
+KL03:
+  categoria: null
+  descricao: Exibir Tipos de Atividade
+  modulo: CO
+KL04:
+  categoria: null
+  descricao: Eliminar Tipos de Atividade
+  modulo: CO
+KL05:
+  categoria: null
+  descricao: Exibir Modificações Tipos de Atividade
+  modulo: CO
+KLH1:
+  categoria: null
+  descricao: Criar Grupo Tipos de Atividade
+  modulo: CO
+KLH2:
+  categoria: null
+  descricao: Modificar Grupo Tipos de Atividade
+  modulo: CO
+KLH3:
+  categoria: null
+  descricao: Exibir Grupo Tipos de Atividade
+  modulo: CO
+KO01:
+  categoria: null
+  descricao: Criar Ordens Internas
+  modulo: CO
+KO02:
+  categoria: null
+  descricao: Modificar Ordens Internas
+  modulo: CO
+KO03:
+  categoria: null
+  descricao: Exibir Ordens Internas
+  modulo: CO
+KO88:
+  categoria: null
+  descricao: Apropriação de Custos Reais – Individual
+  modulo: CO
+KOB1:
+  categoria: Controle de Produção
+  descricao: Custos Incorridos
+  modulo: PP
+KOH1:
+  categoria: null
+  descricao: Criar Grupo de Ordens Internas
+  modulo: CO
+KOH2:
+  categoria: null
+  descricao: Modificar Grupo de Ordens Internas
+  modulo: CO
+KOH3:
+  categoria: null
+  descricao: Exibir Grupo de Ordens Internas
+  modulo: CO
+KP06:
+  categoria: null
+  descricao: Modificar Planejamento dos Elementos de Custo
+  modulo: CO
+KP07:
+  categoria: null
+  descricao: Exibir Planejamento dos Elementos de Custo
+  modulo: CO
+KP26:
+  categoria: null
+  descricao: Modificar Planejamento dos Tipos de Atividade
+  modulo: CO
+KP27:
+  categoria: null
+  descricao: Exibir Planejamento dos Tipos de Atividade
+  modulo: CO
+KP46:
+  categoria: null
+  descricao: Modificar Planejamento dos Índices Estatísticos
+  modulo: CO
+KP47:
+  categoria: null
+  descricao: Exibir Planejamento dos Índices Estatísticos
+  modulo: CO
+KP96:
+  categoria: null
+  descricao: Ativar Integração
+  modulo: CO
+KP97:
+  categoria: null
+  descricao: Copiar Planejamento
+  modulo: CO
+KPSI:
+  categoria: null
+  descricao: Reconciliação com Atividades Planejadas
+  modulo: CO
+KPU1:
+  categoria: null
+  descricao: Criar Reavaliação Planejamento
+  modulo: CO
+KPU2:
+  categoria: null
+  descricao: Modificar Reavaliação Planejamento
+  modulo: CO
+KPU3:
+  categoria: null
+  descricao: Exibir Reavaliação Planejamento
+  modulo: CO
+KS01:
+  categoria: null
+  descricao: Criar Centro de Custo
+  modulo: CO
+KS02:
+  categoria: null
+  descricao: Modificar Centro de Custo
+  modulo: CO
+KS03:
+  categoria: null
+  descricao: Exibir Centro de Custo
+  modulo: CO
+KS04:
+  categoria: null
+  descricao: Eliminar Centro de Custo
+  modulo: CO
+KS05:
+  categoria: null
+  descricao: Exibir Modificações nos Centro de Custo
+  modulo: CO
+KS08:
+  categoria: null
+  descricao: Atualizações de Centros de Custo em Lista
+  modulo: CO
+KSH1:
+  categoria: null
+  descricao: Criar Grupo de Centros de Custo
+  modulo: CO
+KSH2:
+  categoria: null
+  descricao: Modificar Grupo de Centros de Custo
+  modulo: CO
+KSH3:
+  categoria: null
+  descricao: Exibir Grupo de Centros de Custo
+  modulo: CO
+KSII:
+  categoria: null
+  descricao: Cálculo do Valor das Atividades
+  modulo: CO
+KSPI:
+  categoria: null
+  descricao: Cálculo do Valor das Atividades
+  modulo: CO
+KSPP:
+  categoria: null
+  descricao: Transferência das Atividades Planejadas por PP
+  modulo: CO
+KSPU:
+  categoria: null
+  descricao: Executar Reavaliação Planejamento
+  modulo: CO
+KSS2:
+  categoria: null
+  descricao: Decomposição
+  modulo: CO
+KSS4:
+  categoria: null
+  descricao: Decomposição
+  modulo: CO
+KSU1:
+  categoria: null
+  descricao: Criar Ciclos de Rateio
+  modulo: CO
+KSU2:
+  categoria: null
+  descricao: Modificar Ciclos de Rateio
+  modulo: CO
+KSU3:
+  categoria: null
+  descricao: Exibir Ciclos de Rateio
+  modulo: CO
+KSU5:
+  categoria: null
+  descricao: Executar Ciclos de Rateio
+  modulo: CO
+KSU7:
+  categoria: null
+  descricao: Criar Ciclos de Rateio do Planejamento
+  modulo: CO
+KSU8:
+  categoria: null
+  descricao: Modificar Ciclos de Rateio do Planejamento
+  modulo: CO
+KSU9:
+  categoria: null
+  descricao: Exibir Ciclos de Rateio do Planejamento
+  modulo: CO
+KSUB:
+  categoria: null
+  descricao: Executar Ciclos de Rateio do Planejamento
+  modulo: CO
+KSV1:
+  categoria: null
+  descricao: Criar Ciclos de Distribuição
+  modulo: CO
+KSV2:
+  categoria: null
+  descricao: Modificar Ciclos de Distribuição
+  modulo: CO
+KSV3:
+  categoria: null
+  descricao: Exibir Ciclos de Distribuição
+  modulo: CO
+KSV5:
+  categoria: null
+  descricao: Executar Ciclos de Distribuição
+  modulo: CO
+KSV7:
+  categoria: null
+  descricao: Criar Ciclos de Distribuição do Planejamento
+  modulo: CO
+KSV8:
+  categoria: null
+  descricao: Modificar Ciclos de Distribuição do Planejamento
+  modulo: CO
+KSV9:
+  categoria: null
+  descricao: Exibir Ciclos de Distribuição do Planejamento
+  modulo: CO
+KSVB:
+  categoria: null
+  descricao: Executar Ciclos de Distribuição do Planejamento
+  modulo: CO
+KSW2:
+  categoria: null
+  descricao: Transferencia Periódica
+  modulo: CO
+KSW5:
+  categoria: null
+  descricao: Executar Transferência Periódica
+  modulo: CO
+LS26:
+  categoria: Controle de Produção
+  descricao: Síntese de Estoques (WM)
+  modulo: PP
+LSMW:
+  categoria: Controle de Produção
+  descricao: Legacy system migration workbench
+  modulo: PP
+LT01:
+  categoria: null
+  descricao: Criar ordem de transferência
+  modulo: WM
+LT02:
+  categoria: null
+  descricao: Criar Ordem de Transferencia para diferença inventário
+  modulo: WM
+LT03:
+  categoria: null
+  descricao: Criar Ordem de Transferencia da nota de remessa
+  modulo: WM
+LT06:
+  categoria: null
+  descricao: Criar Ordem de Transferencia para doc. material
+  modulo: WM
+LT07:
+  categoria: null
+  descricao: Criar Ordem de Transferencia para unid. estoque mista
+  modulo: WM
+LT15:
+  categoria: null
+  descricao: Estornar ordem de transferência
+  modulo: WM
+LT16:
+  categoria: null
+  descricao: Estornar Ordem de Transferencia para unidade depósito
+  modulo: WM
+LT21:
+  categoria: null
+  descricao: Exibir ordem de transferência
+  modulo: WM
+LT22:
+  categoria: null
+  descricao: Exibir ordem transferência/tipo dep.
+  modulo: WM
+LT23:
+  categoria: null
+  descricao: Exibir ordens transferência por nºs
+  modulo: WM
+LT24:
+  categoria: null
+  descricao: Exibir ordem transferência/material
+  modulo: WM
+LT25:
+  categoria: null
+  descricao: Exibir ordem transferência/grupo
+  modulo: WM
+LT26:
+  categoria: null
+  descricao: Ords. transferência para posiç. dep.
+  modulo: WM
+LT31:
+  categoria: null
+  descricao: Impressão manual de Ordem de Transferencia
+  modulo: WM
+LT32:
+  categoria: null
+  descricao: Impressão de Ordem de Transferenciapara unidade estoque
+  modulo: WM
+LT41:
+  categoria: null
+  descricao: Preparar NTs para process. coletivo
+  modulo: WM
+LT42:
+  categoria: null
+  descricao: Criar Ordem de Transferencia no processmto. coletivo
+  modulo: WM
+LT44:
+  categoria: null
+  descricao: Lançamento de processamento coletivo
+  modulo: WM
+MB01:
+  categoria: Inventário
+  descricao: Entrada de materiais com referência ao pedido de compras
+  modulo: MM
+MB03:
+  categoria: Inventário
+  descricao: Consulta movimentação de material
+  modulo: MM
+MB1A:
+  categoria: Inventário
+  descricao: Saída de materiais
+  modulo: MM
+MB1B:
+  categoria: Inventário
+  descricao: Transferência de materiais
+  modulo: MM
+MB1C:
+  categoria: Inventário
+  descricao: Entrada de materiais
+  modulo: MM
+MB51:
+  categoria: Inventário
+  descricao: Consulta movimentação de material
+  modulo: MM
+MB52:
+  categoria: Inventário
+  descricao: Consulta estoque de vários materiais ao mesmo tempo
+  modulo: MM
+MB53:
+  categoria: Inventário
+  descricao: Disponibilidade centro
+  modulo: MM
+MBSM:
+  categoria: Entrada Fiscal
+  descricao: Consulta documentos que foram estornados
+  modulo: MM
+MBST:
+  categoria: Entrada Física
+  descricao: Estorno de documento (MIGO)
+  modulo: MM
+MC74:
+  categoria: Planejamento de Vendas e Operação (SOP)
+  descricao: Transferência dados SOP para Gestão da Demanda (Material)
+  modulo: PP
+MC75:
+  categoria: Planejamento de Vendas e Operação (SOP)
+  descricao: Transferência dados SOP para Gestão da Demanda (grupo de Produtos)
+  modulo: PP
+MC81:
+  categoria: Planejamento de Vendas e Operação (SOP)
+  descricao: Criar Planejamento para Grupo de produtos
+  modulo: PP
+MC82:
+  categoria: Planejamento de Vendas e Operação (SOP)
+  descricao: Modificar Planejamento para Grupo de Produtos
+  modulo: PP
+MC83:
+  categoria: Planejamento de Vendas e Operação (SOP)
+  descricao: Exibir Planejamento para Grupo de Produtos
+  modulo: PP
+MC84:
+  categoria: Planejamento de Vendas e Operação (SOP)
+  descricao: Criar grupo de produtos
+  modulo: PP
+MC85:
+  categoria: Planejamento de Vendas e Operação (SOP)
+  descricao: Exibir grupo de produtos
+  modulo: PP
+MC86:
+  categoria: Planejamento de Vendas e Operação (SOP)
+  descricao: Modificar grupo de produtos
+  modulo: PP
+MC87:
+  categoria: Planejamento de Vendas e Operação (SOP)
+  descricao: Criar Planejamento para Material
+  modulo: PP
+MC88:
+  categoria: Planejamento de Vendas e Operação (SOP)
+  descricao: Modificar Planejamento para Material
+  modulo: PP
+MC89:
+  categoria: Planejamento de Vendas e Operação (SOP)
+  descricao: Exibir Planejamento para Material
+  modulo: PP
+MD02:
+  categoria: Planejamento de Necessidades (MRP)
+  descricao: Planejamento Individual Multi-Nível
+  modulo: PP
+MD03:
+  categoria: Planejamento de Necessidades (MRP)
+  descricao: Planejamento Individual Um Nível
+  modulo: PP
+MD04:
+  categoria: Planejamento de Necessidades (MRP)
+  descricao: Lista Atual Necessidade/Estoque
+  modulo: PP
+MD05:
+  categoria: Planejamento de Necessidades (MRP)
+  descricao: Lista MRP Material
+  modulo: PP
+MD06:
+  categoria: Planejamento de Necessidades (MRP)
+  descricao: Exibir Coletiva Lista MRP
+  modulo: PP
+MD07:
+  categoria: Planejamento de Necessidades (MRP)
+  descricao: Exibir Coletiva Necessidade/Estoque
+  modulo: PP
+MD11:
+  categoria: Planejamento de Necessidades (MRP)
+  descricao: Criar Ordem Planejada
+  modulo: PP
+MD12:
+  categoria: Planejamento de Necessidades (MRP)
+  descricao: Modificar Ordem Planejada
+  modulo: PP
+MD14:
+  categoria: Planejamento de Necessidades (MRP)
+  descricao: Conversão Individual Req. Compras
+  modulo: PP
+MD15:
+  categoria: Planejamento de Necessidades (MRP)
+  descricao: Conversão Coletiva Req. Compras
+  modulo: PP
+MD41:
+  categoria: Planejamento (MPS)
+  descricao: Planejamento Individual Multi-Nível
+  modulo: PP
+MD42:
+  categoria: Planejamento (MPS)
+  descricao: Planejamento Individual Um Nível
+  modulo: PP
+MD61:
+  categoria: Gestão da Demanda
+  descricao: Criar Necessidade Independente Prevista
+  modulo: PP
+MD62:
+  categoria: Gestão da Demanda
+  descricao: Modificar Necessidade Independente Prevista
+  modulo: PP
+MD63:
+  categoria: Gestão da Demanda
+  descricao: Exibir Necessidade Independente Prevista
+  modulo: PP
+MD73:
+  categoria: Gestão da Demanda
+  descricao: Exibir Necessidade Total
+  modulo: PP
+ME01:
+  categoria: Livro Fiscal
+  descricao: Criar LOF/Atualizar
+  modulo: MM
+ME15:
+  categoria: Livro Fiscal
+  descricao: deletar registro Info
+  modulo: MM
+ME21N:
+  categoria: Pedidos de Compras
+  descricao: Cria pedido de compras
+  modulo: MM
+ME22N:
+  categoria: Pedidos de Compras
+  descricao: Modifica pedido de compras
+  modulo: MM
+ME23N:
+  categoria: Pedidos de Compras
+  descricao: Consulta pedido de compras
+  modulo: MM
+ME24N:
+  categoria: Pedidos de Compras
+  descricao: Atualizar anexo
+  modulo: MM
+ME28:
+  categoria: Pedidos de Compras
+  descricao: Liberação dos pedidos de compras
+  modulo: MM
+ME2L:
+  categoria: Relatório de Compras
+  descricao: Lista de pedidos de compras por fornecedor
+  modulo: MM
+ME2M:
+  categoria: Relatório de Compras
+  descricao: Lista de pedidos de compras por material
+  modulo: MM
+ME2N:
+  categoria: Livro Fiscal
+  descricao: Doc de compra por nº documento
+  modulo: MM
+ME31K:
+  categoria: Contratos
+  descricao: Criar contrato
+  modulo: MM
+ME32K:
+  categoria: Contratos
+  descricao: Modificar contrato
+  modulo: MM
+ME33K:
+  categoria: Contratos
+  descricao: Consulta contrato
+  modulo: MM
+ME35K:
+  categoria: Contratos
+  descricao: Libera contrato
+  modulo: MM
+ME3L:
+  categoria: Relatório de Compras
+  descricao: Lista de contratos por fornecedor
+  modulo: MM
+ME3M:
+  categoria: Relatório de Compras
+  descricao: Lista de contratos por material
+  modulo: MM
+ME41:
+  categoria: Cotação
+  descricao: Criar Solicitação de Cotação
+  modulo: MM
+ME42:
+  categoria: Cotação
+  descricao: Modificar Solicitação de Cotação
+  modulo: MM
+ME43:
+  categoria: Cotação
+  descricao: Exibir Solicitação de Cotação
+  modulo: MM
+ME44:
+  categoria: Cotação
+  descricao: Atualizar Anexo Solicitação de Cotação
+  modulo: MM
+ME45:
+  categoria: Cotação
+  descricao: liberarSolicitação de Cotação
+  modulo: MM
+ME47:
+  categoria: Cotação
+  descricao: Atualizar Cotação
+  modulo: MM
+ME48:
+  categoria: Cotação
+  descricao: Exibir Cotação
+  modulo: MM
+ME49:
+  categoria: Cotação
+  descricao: Comparação de Preços
+  modulo: MM
+ME51N:
+  categoria: Requisição de Compras
+  descricao: Cria requisição de compras
+  modulo: MM
+ME52N:
+  categoria: Requisição de Compras
+  descricao: Modifica requisição de compras
+  modulo: MM
+ME53N:
+  categoria: Requisição de Compras
+  descricao: Consulta requisição de compras
+  modulo: MM
+ME54N:
+  categoria: Requisição de Compras
+  descricao: Libera requisição de compras (individual)
+  modulo: MM
+ME55:
+  categoria: Requisição de Compras
+  descricao: Libera requisição de compras (coletivo)
+  modulo: MM
+ME57:
+  categoria: Requisição de Compras
+  descricao: Atribuir e Processar Requisições de Compras
+  modulo: MM
+ME5A:
+  categoria: Relatório de Compras
+  descricao: Lista de requisições de compras
+  modulo: MM
+ME80FN:
+  categoria: Relatório de Compras
+  descricao: Análises gerais dos pedidos de compras
+  modulo: MM
+ME9F:
+  categoria: Pedidos de Compras
+  descricao: Imprimir pedidos de compras
+  modulo: MM
+MF50:
+  categoria: Controle de Produção
+  descricao: Planejamento para Produção Repetitiva
+  modulo: PP
+MF52:
+  categoria: Controle de Produção
+  descricao: Visualização Tabela de Planejamento
+  modulo: PP
+MFBF:
+  categoria: Controle de Produção
+  descricao: Confirmação da produção repetitiva
+  modulo: PP
+MI01:
+  categoria: Inventário Físico
+  descricao: Criar documento de inventário
+  modulo: MM
+MI02:
+  categoria: Inventário Físico
+  descricao: Modificar documento de inventário
+  modulo: MM
+MI03:
+  categoria: Inventário Físico
+  descricao: Exibir documento de inventário
+  modulo: MM
+MI04:
+  categoria: Inventário Físico
+  descricao: Registrar Contagem de Inventário
+  modulo: MM
+MI06:
+  categoria: Inventário Físico
+  descricao: Exibir Contagem de Inventário
+  modulo: MM
+MI07:
+  categoria: Inventário Físico
+  descricao: Registrar Diferença (material físico com o SAP)
+  modulo: MM
+MI11:
+  categoria: Inventário Físico
+  descricao: Registrar Recontagem
+  modulo: MM
+MI20:
+  categoria: Inventário Físico
+  descricao: Imprimir Lista de Diferenças
+  modulo: MM
+MI21:
+  categoria: Inventário Físico
+  descricao: Imprimir Documento de Inventário
+  modulo: MM
+MIGO:
+  categoria: Entrada Física
+  descricao: Movimentação de mercadorias
+  modulo: MM
+MIR4:
+  categoria: Entrada Fiscal
+  descricao: Consulta documentos gerados pela MIRO
+  modulo: MM
+MIR6:
+  categoria: Entrada Fiscal
+  descricao: Consulta documentos gerados pela MIRO
+  modulo: MM
+MIRO:
+  categoria: Entrada Fiscal
+  descricao: Lançamento das faturas e notas fiscais
+  modulo: MM
+MK01:
+  categoria: Fornecedores
+  descricao: Cria fornecedor - Dados gerais e compras
+  modulo: MM
+MK02:
+  categoria: Fornecedores
+  descricao: Modifica fornecedor - Dados gerais e compras
+  modulo: MM
+MK03:
+  categoria: Fornecedores
+  descricao: Consulta fornecedor - Dados gerais e compras
+  modulo: MM
+MKVZ:
+  categoria: Fornecedores
+  descricao: Lista de fornecedores
+  modulo: MM
+MM01:
+  categoria: Materiais
+  descricao: Criar material
+  modulo: MM
+MM02:
+  categoria: Materiais
+  descricao: Modifica material
+  modulo: MM
+MM03:
+  categoria: Materiais
+  descricao: Consulta material
+  modulo: MM
+MM06:
+  categoria: Materiais
+  descricao: Marcar material para eliminação
+  modulo: MM
+MM07:
+  categoria: Materiais
+  descricao: Manutenção em Massa
+  modulo: MM
+MM60:
+  categoria: Materiais
+  descricao: Lista de materiais
+  modulo: MM
+MMBE:
+  categoria: Inventário
+  descricao: Consulta estoque do material (síntese de estoque)
+  modulo: MM
+MMPV:
+  categoria: Livro Fiscal
+  descricao: Diferir Período MM
+  modulo: MM
+MR51:
+  categoria: Inventário
+  descricao: Consulta documentos contábeis gerados na movimentação de material
+  modulo: MM
+MR8M:
+  categoria: Entrada Fiscal
+  descricao: Estorno da MIRO
+  modulo: MM
+MRBR:
+  categoria: Entrada Fiscal
+  descricao: Liberar Faturas Bloqueadas
+  modulo: MM
+MS02:
+  categoria: Planejamento Longo Prazo (LTP)
+  descricao: Planejamento Individual Multi-Nível
+  modulo: PP
+MS03:
+  categoria: Planejamento Longo Prazo (LTP)
+  descricao: Planejamento Individual Um Nível
+  modulo: PP
+MS04:
+  categoria: Planejamento Longo Prazo (LTP)
+  descricao: Lista Atual Necessidade/Estoque
+  modulo: PP
+MS05:
+  categoria: Planejamento Longo Prazo (LTP)
+  descricao: Lista MRP Material
+  modulo: PP
+MS06:
+  categoria: Planejamento Longo Prazo (LTP)
+  descricao: Exibir Coletiva Lista MRP
+  modulo: PP
+MS07:
+  categoria: Planejamento Longo Prazo (LTP)
+  descricao: Exibir Coletiva Necessidade/Estoque
+  modulo: PP
+MS31:
+  categoria: Planejamento Longo Prazo (LTP)
+  descricao: Criar Cenário
+  modulo: PP
+MS32:
+  categoria: Planejamento Longo Prazo (LTP)
+  descricao: Modificar Cenário
+  modulo: PP
+MS33:
+  categoria: Planejamento Longo Prazo (LTP)
+  descricao: Exibir Cenário
+  modulo: PP
+MSC1N:
+  categoria: Lote
+  descricao: Criar dados do Lote
+  modulo: MM
+MSC2N:
+  categoria: Lote
+  descricao: Modificar dados do Lote
+  modulo: MM
+MSC3N:
+  categoria: Lote
+  descricao: Exibir dados do Lote Lote
+  modulo: MM
+OB08:
+  categoria: Contabilidade (GL)
+  descricao: Exibir/entrar taxas de câmbio
+  modulo: FI
+OB09:
+  categoria: Contabilidade (GL)
+  descricao: Definir contas para diferença de câmbio
+  modulo: FI
+OB13:
+  categoria: Contabilidade (GL)
+  descricao: Criar plano de contas
+  modulo: FI
+OB37:
+  categoria: Contabilidade (GL)
+  descricao: Atribuir empresa a variante de exercício
+  modulo: FI
+OB40:
+  categoria: Contabilidade (GL)
+  descricao: Exibir contas de impostos
+  modulo: FI
+OB52:
+  categoria: Imobilizado (AA/AM)
+  descricao: Diferir Período FI
+  modulo: FI
+OB53:
+  categoria: Contabilidade (GL)
+  descricao: Determinar conta de resultado transportado
+  modulo: FI
+OB74:
+  categoria: Contabilidade (GL)
+  descricao: Definir regras para compensação automática
+  modulo: FI
+OBA7:
+  categoria: Contabilidade (GL)
+  descricao: Exibir/Criar Documentos Contábeis
+  modulo: FI
+OBD4:
+  categoria: Contabilidade (GL)
+  descricao: Exibir tipos de contas
+  modulo: FI
+OBV7/OB62:
+  categoria: Contabilidade (GL)
+  descricao: Atribuir empresa ao plano de contas
+  modulo: FI
+OBY6:
+  categoria: Contabilidade (GL)
+  descricao: Exibir dados gerais da Empresa
+  modulo: FI
+OBYP:
+  categoria: Contabilidade (GL)
+  descricao: Definir contas para compensação EM/EF
+  modulo: FI
+OKENN:
+  categoria: null
+  descricao: Hierarquia de Centro de Custos
+  modulo: CO
+OKP1:
+  categoria: null
+  descricao: Bloquear Período
+  modulo: CO
+OMIK:
+  categoria: null
+  descricao: Controle de Transferencia de Atividades Planejadas
+  modulo: CO
+OX02:
+  categoria: Contabilidade (GL)
+  descricao: Criar Empresa
+  modulo: FI
+OX16:
+  categoria: Contabilidade (GL)
+  descricao: Atribuir empresa a sociedade
+  modulo: FI
+OY01:
+  categoria: Contabilidade (GL)
+  descricao: Exibir Países
+  modulo: FI
+OY03:
+  categoria: Contabilidade (GL)
+  descricao: Verificar códigos de moedas
+  modulo: FI
+PA30:
+  categoria: null
+  descricao: Criar / Modificar Infotipo
+  modulo: HR
+PA40:
+  categoria: null
+  descricao: Contratar
+  modulo: HR
+PAL1:
+  categoria: Função Parceiro
+  descricao: Criar Responsável Vendas
+  modulo: SD
+PAL2:
+  categoria: Função Parceiro
+  descricao: Exibir Responsável Vendas
+  modulo: SD
+PAL3:
+  categoria: Função Parceiro
+  descricao: Modificar Responsável Vendas
+  modulo: SD
+QS41:
+  categoria: Catálogos
+  descricao: Modificar Catálogos
+  modulo: PM
+QS42:
+  categoria: Catálogos
+  descricao: Consulta de Catálogos
+  modulo: PM
+QS49:
+  categoria: Catálogos
+  descricao: Relatório de Catálogos
+  modulo: PM
+SE11:
+  categoria: null
+  descricao: Verificar tabela
+  modulo: BC
+SE16:
+  categoria: null
+  descricao: Verificar dados Contidos em tabelas
+  modulo: BC
+SE37:
+  categoria: null
+  descricao: Verificar Função
+  modulo: BC
+SE38:
+  categoria: null
+  descricao: Verificar Programa
+  modulo: BC
+SE91:
+  categoria: null
+  descricao: para mensagem de erro nos programas
+  modulo: BC
+SE93:
+  categoria: null
+  descricao: Verificar transações
+  modulo: BC
+SM30:
+  categoria: null
+  descricao: Inserir, Deletar e Modificar Dados de Tabelas
+  modulo: BC
+SM35:
+  categoria: null
+  descricao: Executar Valores Encontrados
+  modulo: CO
+SM37:
+  categoria: null
+  descricao: JOB
+  modulo: BC
+SP01:
+  categoria: null
+  descricao: Controlar Spool
+  modulo: BC
+S_ALR_87011990:
+  categoria: Imobilizado (AA/AM)
+  descricao: Quadro do imobilizado
+  modulo: FI
+S_ALR_87011994:
+  categoria: Imobilizado (AA/AM)
+  descricao: Ativo imobilizado
+  modulo: FI
+S_ALR_87012039:
+  categoria: Imobilizado (AA/AM)
+  descricao: Movimentos do imobilizado
+  modulo: FI
+S_ALR_87012050:
+  categoria: Imobilizado (AA/AM)
+  descricao: Aquisições de imobilizado
+  modulo: FI
+S_ALR_87012052:
+  categoria: Imobilizado (AA/AM)
+  descricao: Baixas do imobilizado
+  modulo: FI
+S_ALR_87012129:
+  categoria: Contas a Pagar (AP)
+  descricao: DIRF
+  modulo: FI
+S_ALR_87012150:
+  categoria: Livro Fiscal
+  descricao: Transação standard - Livro Fiscal Modelo 1
+  modulo: MM
+S_ALR_87012151:
+  categoria: Livro Fiscal
+  descricao: Transação standard - Livro Fiscal Modelo 2
+  modulo: MM
+S_ALR_87012152:
+  categoria: Livro Fiscal
+  descricao: Transação standard - Livro Fiscal Modelo 3
+  modulo: MM
+S_ALR_87012153:
+  categoria: Livro Fiscal
+  descricao: Transação standard - Livro Fiscal Modelo 7
+  modulo: MM
+S_ALR_87012154:
+  categoria: Contas a Pagar (AP)
+  descricao: Directory for Calculating IPI Tax
+  modulo: FI
+S_ALR_87012155:
+  categoria: Contas a Pagar (AP)
+  descricao: Directory for Calculating ICMS Tax
+  modulo: FI
+S_ALR_87012157:
+  categoria: Contas a Pagar (AP)
+  descricao: Directory for Calculating ISS Tax
+  modulo: FI
+S_ALR_87012159:
+  categoria: Contas a Pagar (AP)
+  descricao: 'IN68: Master data, document files, and tables'
+  modulo: FI
+S_ALR_87012167:
+  categoria: Contas a Receber (AR)
+  descricao: Accounts Receivable Information System
+  modulo: FI
+S_ALR_87012168:
+  categoria: Contas a Receber (AR)
+  descricao: Due Date Analysis for Open Items
+  modulo: FI
+S_ALR_87012169:
+  categoria: Contas a Receber (AR)
+  descricao: 'Transaction Figures: Account Balance'
+  modulo: FI
+S_ALR_87012175:
+  categoria: Contas a Receber (AR)
+  descricao: Open Items - Customer Due Date Forecast
+  modulo: FI
+S_ALR_87012177:
+  categoria: Contas a Receber (AR)
+  descricao: Customer Payment History
+  modulo: FI
+S_ALR_87012179:
+  categoria: Contas a Receber (AR)
+  descricao: Customer List
+  modulo: FI
+S_ALR_87012180:
+  categoria: Contas a Receber (AR)
+  descricao: Address List
+  modulo: FI
+S_ALR_87012182:
+  categoria: Contas a Receber (AR)
+  descricao: Display Changes to Customers
+  modulo: FI
+S_ALR_87012183:
+  categoria: Contas a Receber (AR)
+  descricao: Display/Confirm Critical Customer Changes
+  modulo: FI
+S_ALR_87012186:
+  categoria: Contas a Receber (AR)
+  descricao: Customer Sales
+  modulo: FI
+S_ALR_87012195:
+  categoria: Contas a Receber (AR)
+  descricao: Customer Master Data Comparison
+  modulo: FI
+S_ALR_87012197:
+  categoria: Contas a Receber (AR)
+  descricao: List of Customer Line Items
+  modulo: FI
+S_ALR_87012199:
+  categoria: Contas a Receber (AR)
+  descricao: List Of Down Payments Open On Key Date - Customers
+  modulo: FI
+S_ALR_87013611:
+  categoria: null
+  descricao: Relatório - Comparação Real x Orçado
+  modulo: CO
+VA01:
+  categoria: Ordem de Vendas
+  descricao: Criar ordem de vendas
+  modulo: SD
+VA02:
+  categoria: Ordem de Vendas
+  descricao: Modificar/cancelar ordem de vendas
+  modulo: SD
+VA03:
+  categoria: Ordem de Vendas
+  descricao: Exibir ordem de vendas
+  modulo: SD
+VA05:
+  categoria: Ordem de Vendas
+  descricao: Listar ordem de vendas
+  modulo: SD
+VAP1:
+  categoria: Função Parceiro
+  descricao: Criar Pessoa de Contato
+  modulo: SD
+VAP2:
+  categoria: Função Parceiro
+  descricao: Modificar Pessoa de Contato
+  modulo: SD
+VAP3:
+  categoria: Função Parceiro
+  descricao: Exibir Pessoa de Contato
+  modulo: SD
+VC/1:
+  categoria: Função Parceiro
+  descricao: Lista Informações de Clientes
+  modulo: SD
+VC/2:
+  categoria: Função Parceiro
+  descricao: Lista Ficha de Clientes
+  modulo: SD
+VD03:
+  categoria: Função Parceiro
+  descricao: Exibir (Diferentes Funções de Parceiros)
+  modulo: SD
+VD04:
+  categoria: Função Parceiro
+  descricao: Exibir Modificações (Diferentes Funções de Parceiros)
+  modulo: SD
+VF01:
+  categoria: Livro Fiscal
+  descricao: Faturar
+  modulo: MM
+VF02:
+  categoria: Faturamento
+  descricao: Modificar documento de faturamento
+  modulo: SD
+VF03:
+  categoria: Faturamento
+  descricao: Exibir documento de faturamento
+  modulo: SD
+VF04:
+  categoria: Faturamento
+  descricao: Processar faturamentos a fazer
+  modulo: SD
+VF05:
+  categoria: Faturamento
+  descricao: Lista documentos de faturamento
+  modulo: SD
+VF07:
+  categoria: Faturamento
+  descricao: Exibir do Arquivo Documento de Faturamento
+  modulo: SD
+VF11:
+  categoria: Faturamento
+  descricao: Estornar (documento de faturamento)
+  modulo: SD
+VFX3:
+  categoria: Faturamento
+  descricao: Faturas bloqueadas
+  modulo: SD
+VG01:
+  categoria: Grupo de Remessa
+  descricao: Criar Grupo de Remessas
+  modulo: SD
+VG02:
+  categoria: Grupo de Remessa
+  descricao: Modificar Grupo de Remessas
+  modulo: SD
+VG03:
+  categoria: Grupo de Remessa
+  descricao: Exibir Grupo de Remessa
+  modulo: SD
+VL01N:
+  categoria: Remessa
+  descricao: Criar remessa
+  modulo: SD
+VL02N:
+  categoria: Livro Fiscal
+  descricao: Saida Mercadoria
+  modulo: MM
+VL03:
+  categoria: Remessa
+  descricao: Exibir remessa
+  modulo: SD
+VL04:
+  categoria: Remessa
+  descricao: Processar remessas a fazer
+  modulo: SD
+VL05:
+  categoria: Remessa
+  descricao: Lista de remessas
+  modulo: SD
+VL08:
+  categoria: Remessa
+  descricao: Confirmar Ordem de Picking
+  modulo: SD
+VL09:
+  categoria: Remessa
+  descricao: Estornar Movimento de mercadoria
+  modulo: SD
+VL10B:
+  categoria: Livro Fiscal
+  descricao: Criar Entrega
+  modulo: MM
+VL15:
+  categoria: Remessa
+  descricao: Remessas em processamento – Confirmar Picking
+  modulo: SD
+VL16:
+  categoria: Remessa
+  descricao: Remessas em processamento – Picking
+  modulo: SD
+VL19:
+  categoria: Remessa
+  descricao: Remessas em processamento – Saída de Mercadorias
+  modulo: SD
+VL21:
+  categoria: Remessa
+  descricao: 'Remessas em processamento – Saída de Mercadorias: Batch'
+  modulo: SD
+VL31N:
+  categoria: Livro Fiscal
+  descricao: gerar aviso de recebimento
+  modulo: MM
+VT01N:
+  categoria: Livro Fiscal
+  descricao: Cria Transporte
+  modulo: MM
+XD01:
+  categoria: Cliente
+  descricao: Criar Cliente
+  modulo: SD
+XD02:
+  categoria: Cliente
+  descricao: Modificar Cliente
+  modulo: SD
+XD03:
+  categoria: Cliente
+  descricao: Exibir Cliente
+  modulo: SD
+XD05:
+  categoria: Cliente
+  descricao: Bloquear/Desbloquear
+  modulo: SD
+XD06:
+  categoria: Cliente
+  descricao: Marcar para Eliminação
+  modulo: SD
+XK01:
+  categoria: Fornecedores
+  descricao: Cria fornecedor
+  modulo: MM
+XK02:
+  categoria: Fornecedores
+  descricao: Modifica fornecedor
+  modulo: MM
+XK03:
+  categoria: Fornecedores
+  descricao: Consulta fornecedor
+  modulo: MM
