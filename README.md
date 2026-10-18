@@ -57,7 +57,7 @@ docs/                 decisions.md · risks.md · demo_script.md · evidence/
 logs/audit.jsonl      chamado, triagem, fontes, confiança, decisão
 ```
 
-## Resultados (docs/evidence/run_20261016_175421.md)
+## Resultados (docs/evidence/run_groq_20261018_200946.md)
 
 | Cenário | Chamados | Resultado |
 |---|---|---|
