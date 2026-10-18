@@ -1,6 +1,6 @@
 # Roteiro de demonstração (20 minutos)
 
-Preparação: Streamlit aberto com embeddings em cache, `logs/audit.jsonl` aberto no editor, README com o diagrama visível, relatório `docs/evidence/run_20261016_175421.md` aberto.
+Preparação: Streamlit aberto com embeddings em cache, `logs/audit.jsonl` aberto no editor, README com o diagrama visível, relatório `docs/evidence/run_groq_20261018_200946.md` aberto.
 
 | Minuto | Bloco | O que mostrar e dizer |
 |---|---|---|
